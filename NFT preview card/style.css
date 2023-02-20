@@ -43,10 +43,6 @@ section{
     border-radius: 10px;
 }
 
-.image:hover{
-    background-image: hsl(215, 51%, 70%);
-}
-
 .image2{
     display: none;
     position: absolute;
