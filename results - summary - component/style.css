@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+main{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.half{
+    border-radius: 10px;
+    width: 50%;
+    width: 360px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+}
+
+#left{
+    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#left p {
+    margin-top: 10px;
+    font-size: 18px;
+    color:  hsl(241, 100%, 89%);
+}
+
+.center{
+    text-align: center;
+}
+
+#circle{
+    margin-top: 45px;
+    height: 200px;
+    background-color: hsla(241, 72%, 46%, .7);
+    height:200px;
+    width:200px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    color: white;
+    font-weight: 800;
+    font-size: 50px;
+}
+
+h2{
+    color: white;
+    margin-top: 20px;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+#right{
+    -webkit-box-shadow: 8px 8px 24px -18px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 8px 8px 24px -18px rgba(66, 68, 90, 1);
+    box-shadow: 8px 8px 24px -18px rgba(66, 68, 90, 1);
+}
+
+
+.summaryScore{
+    display: flex;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+#red{
+    background-color: hsl(0, 100%, 67%, 0.1);
+}
+
+#redText{
+    color:hsl(0, 100%, 67%);
+}
+
+#yellow{
+   background-color:  hsl(39, 100%, 56%, 0.1);
+}
+
+#yellowText{
+    color: hsl(39, 100%, 56%);
+}
+
+#blue{
+    background-color: hsl(234, 85%, 45%,0.1);
+}
+
+#blueText{
+    color:hsl(234, 85%, 45%);
+}
+
+#green{
+    background-color: hsl(166, 100%, 37%, 0.1);
+}
+
+#greenText{
+    color: hsl(166, 100%, 37%);
+}
+
+#continue{
+    display: flex;
+    height: 55px;
+}
+
+a{
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    padding: 18px;
+    background-color: #6594b0;
+    border-radius: 40px;
+}
