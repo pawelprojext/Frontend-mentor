@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Red Hat Display', sans-serif;
+    background: url(images/pattern-background-mobile.svg), hsl(225, 100%, 94%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+
+    background-color: white;
+    border-radius: 15px;
+
+    width: 400px;
+    height: 600px;
+}
+
+#content{
+    padding: 40px;
+}
+
+.image img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.textContent{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.textContent p {
+    font-size: 16px;
+    color: hsl(224, 23%, 55%);
+}
+
+#Plan{
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    align-items: center;
+    background-color: hsl(225, 100%, 98%);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.weight700{
+    font-weight: 700;
+}
+
+.greyColor{
+    color: hsl(224, 23%, 55%);
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.FirstButton{
+    background-color: hsl(245, 75%, 52%);
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 60px;
+}
+
+.SecondButton{
+    color: hsl(224, 23%, 55%);
+    text-decoration: none;
+    padding: 15px;
+    font-weight: 900;
+}
