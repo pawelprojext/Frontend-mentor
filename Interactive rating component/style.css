@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Overpass', sans-serif;
+    background-color: hsl(216, 12%, 8%);
+    min-height: 100vh;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.FirstContainer{
+    background-color: hsl(213, 19%, 18%);
+    width: 400px;
+    height: 380px;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.image{
+    background-color: hsl(210, 19%, 11%);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+img{
+    width: 60%;
+}
+
+.Content{
+    padding: 25px;
+}
+
+h2{
+    margin-top: 25px;
+}
+
+.TextContent{
+    margin-top: 25px;
+    color: hsl(216, 12%, 54%);
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    margin-top: 15px;
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: hsl(210, 19%, 11%);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    color: hsl(216, 12%, 54%);
+}
+
+.button:hover{
+    background-color:hsl(216, 12%, 54%);
+    color: white;
+    cursor: pointer;
+}
+
+.button::focus{
+    background-color: hsl(25, 97%, 53%);
+}
+
+.SecondContainer{
+    display: none;
+}
