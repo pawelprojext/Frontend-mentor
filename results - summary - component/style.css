@@ -77,14 +77,12 @@ h2{
 
 
 .summaryScore{
-    display: flex;
+    display: grid;
+    grid-template-columns: 10% 65% 25%;
     padding: 20px;
     border-radius: 15px;
     margin-top: 15px;
     margin-bottom: 15px;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
 }
 
 
