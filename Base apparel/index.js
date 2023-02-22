@@ -1,6 +1,6 @@
 const input = document.querySelector("input");
 const button = document.querySelector("button");
-const valid = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+const valid = (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
 const ErrorMessage = document.querySelector('.errorMessage');
 const ErrorImage = document.querySelector('.error')
 
@@ -13,7 +13,7 @@ button.addEventListener("click", (e)=>{
         window.location.reload();
     } else{
         ErrorMessage.textContent = "Please provide a valid email";
-        ErrorImage.classList.toggle('hide');
-        input.classList.toggle('outline');
+        ErrorImage.classList.remove('hide');
+        input.classList.add('outline');
     }
 });
