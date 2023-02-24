@@ -1,0 +1,126 @@
+$font-size : 20px;
+$btnColor: hsl(223, 87%, 63%);
+$iconColor : hsl(223, 100%, 88%);
+$grayColor: hsl(0, 0%, 59%);
+$border-radius: 50px;
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600&display=swap');
+
+@mixin flexColumn{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.container{
+    @include flexColumn();
+}
+
+.textContent{
+    margin-top: 3%;
+    @include flexColumn();
+
+   span{
+    color:$iconColor;
+   }
+
+   h1{
+    font-size: 35px;
+    margin-bottom: 25px;
+   }
+
+   h3{
+    font-size: 40px;
+    font-weight: lighter;
+    margin-bottom: 15px;
+   }
+
+   .grayText{
+    color: $grayColor;
+   }
+
+   p{
+    font-size: $font-size;
+    font-weight: 600;
+   }
+
+   b{
+    color: black;
+    font-weight: 600;
+   }
+}
+
+.form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    width: 650px;
+
+    input{
+        width: 65%;
+        margin-right: 10px;
+        border-radius: $border-radius;
+        border: none;
+        height: 50px;
+        border: 1px solid $grayColor;
+        text-align: start;
+        padding: 20px;
+    }
+
+    button{
+        width: 35%;
+        border-radius: $border-radius;
+        background-color: $btnColor;
+        color: white;
+        font-size: $font-size;
+        border: none;
+        -webkit-box-shadow: 3px 8px 24px -7px rgba(66, 68, 90, 1);
+        -moz-box-shadow: 3px 8px 24px -7px rgba(66, 68, 90, 1);
+        box-shadow: 3px 8px 24px -7px rgba(66, 68, 90, 1);
+        cursor: pointer;
+        font-weight: 300;
+    }
+
+}
+
+.image{
+    width: 650px;
+    margin-top: 25px;
+    img{
+        width: 100%;
+    }
+}
+
+.footer{
+    @include flexColumn();
+  .icons{
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+  }
+    i{
+        color:$btnColor;
+        font-size: $font-size;
+        border: 1px solid $iconColor;
+        border-radius: 50%;
+        padding: 5px;
+        margin-right: 10px;
+    }
+}
+
+.error{
+    outline: 1px solid red;
+}
+

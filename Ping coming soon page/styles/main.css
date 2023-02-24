@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.textContent {
+  margin-top: 3%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.textContent span {
+  color: hsl(223deg, 100%, 88%);
+}
+.textContent h1 {
+  font-size: 35px;
+  margin-bottom: 25px;
+}
+.textContent h3 {
+  font-size: 40px;
+  font-weight: lighter;
+  margin-bottom: 15px;
+}
+.textContent .grayText {
+  color: hsl(0deg, 0%, 59%);
+}
+.textContent p {
+  font-size: 20px;
+  font-weight: 600;
+}
+.textContent b {
+  color: black;
+  font-weight: 600;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  width: 650px;
+}
+.form input {
+  width: 65%;
+  margin-right: 10px;
+  border-radius: 50px;
+  border: none;
+  height: 50px;
+  border: 1px solid hsl(0deg, 0%, 59%);
+  text-align: start;
+  padding: 20px;
+}
+.form button {
+  width: 35%;
+  border-radius: 50px;
+  background-color: hsl(223deg, 87%, 63%);
+  color: white;
+  font-size: 20px;
+  border: none;
+  box-shadow: 3px 8px 24px -7px rgb(66, 68, 90);
+  cursor: pointer;
+  font-weight: 300;
+}
+
+.image {
+  width: 650px;
+  margin-top: 25px;
+}
+.image img {
+  width: 100%;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.footer .icons {
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+}
+.footer i {
+  color: hsl(223deg, 87%, 63%);
+  font-size: 20px;
+  border: 1px solid hsl(223deg, 100%, 88%);
+  border-radius: 50%;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.error {
+  outline: 1px solid red;
+}/*# sourceMappingURL=main.css.map */

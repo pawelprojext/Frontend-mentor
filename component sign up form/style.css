@@ -73,7 +73,6 @@ a{
 
 
 .formContainer{
-    
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -86,10 +85,23 @@ input{
     border: 1px solid hsl(246, 25%, 77%) ;
     border-radius: 5px;
     font-weight: 600;
+    position: relative;
+    width: 100%;
 }
 
 .test{
-    border: 2px dotted blue;
+    border: 1px solid red;
+}
+
+.text{
+    width: 100%;
+    position: relative;
+}
+
+.error{
+    position: absolute;
+    right: 30px;
+    top: 7px;    
 }
 
 input:focus{
