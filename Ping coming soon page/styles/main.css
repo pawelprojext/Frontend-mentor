@@ -1,4 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600&display=swap");
+@media screen and (max-width: 768px) {
+  .form {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .form button {
+    width: 65%;
+    margin-top: 15px;
+  }
+  .errorMessage {
+    text-align: center;
+  }
+  .image {
+    width: 90%;
+  }
+  .footer {
+    margin-top: 150px;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -23,7 +43,7 @@ body {
   flex-direction: column;
 }
 .textContent span {
-  color: hsl(223deg, 100%, 88%);
+  color: hsl(223, 100%, 88%);
 }
 .textContent h1 {
   font-size: 35px;
@@ -35,7 +55,7 @@ body {
   margin-bottom: 15px;
 }
 .textContent .grayText {
-  color: hsl(0deg, 0%, 59%);
+  color: hsl(0, 0%, 59%);
 }
 .textContent p {
   font-size: 20px;
@@ -46,6 +66,14 @@ body {
   font-weight: 600;
 }
 
+.errorMessage {
+  color: red;
+}
+
+.hide {
+  display: none;
+}
+
 .form {
   display: flex;
   flex-direction: row;
@@ -53,26 +81,39 @@ body {
   padding: 20px;
   width: 650px;
 }
-.form input {
+.form .textContainer {
+  display: flex;
+  flex-direction: column;
   width: 65%;
+}
+.form .textContainer input {
   margin-right: 10px;
   border-radius: 50px;
   border: none;
   height: 50px;
-  border: 1px solid hsl(0deg, 0%, 59%);
+  border: 1px solid hsl(0, 0%, 59%);
   text-align: start;
   padding: 20px;
+}
+.form .textContainer p {
+  margin-top: 15px;
+  margin-left: 20px;
 }
 .form button {
   width: 35%;
   border-radius: 50px;
-  background-color: hsl(223deg, 87%, 63%);
+  background-color: hsl(223, 87%, 63%);
   color: white;
   font-size: 20px;
   border: none;
   box-shadow: 3px 8px 24px -7px rgb(66, 68, 90);
   cursor: pointer;
   font-weight: 300;
+  height: 50px;
+}
+.form button:hover {
+  background-color: hsl(223, 73%, 75%);
+  cursor: pointer;
 }
 
 .image {
@@ -94,9 +135,9 @@ body {
   padding: 15px;
 }
 .footer i {
-  color: hsl(223deg, 87%, 63%);
+  color: hsl(223, 87%, 63%);
   font-size: 20px;
-  border: 1px solid hsl(223deg, 100%, 88%);
+  border: 1px solid hsl(223, 100%, 88%);
   border-radius: 50%;
   padding: 5px;
   margin-right: 10px;
@@ -104,4 +145,25 @@ body {
 
 .error {
   outline: 1px solid red;
+}
+
+@media screen and (max-width: 768px) {
+  .form {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .form button {
+    width: 65%;
+    margin-top: 15px;
+  }
+  .errorMessage {
+    text-align: center;
+  }
+  .image {
+    width: 90%;
+  }
+  .footer {
+    margin-top: 150px;
+  }
 }/*# sourceMappingURL=main.css.map */

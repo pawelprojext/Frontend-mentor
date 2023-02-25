@@ -1,6 +1,7 @@
 const input = document.querySelector("input");
 const button = document.querySelector("button");
 const valid = (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+const errorMessage = document.querySelector('.errorMessage')
 
 button.addEventListener("click", (e)=>{
     e.preventDefault();
@@ -12,5 +13,6 @@ button.addEventListener("click", (e)=>{
     } else{
         input.classList.add('error');
         input.innerHTML = " ";
+        errorMessage.classList.remove('hide');
     }
 });
