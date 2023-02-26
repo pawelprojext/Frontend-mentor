@@ -28,22 +28,26 @@
   <span class="back-card-cvc"> 000</span>
 </div>
 </div>
-  Cardholder Name
-  e.g. Jane Appleseed
 
-  Card Number
-  e.g. 1234 5678 9123 0000
+<div class="form-container">
+ 
+ <form>
+ <p><label for="name"> Cardholder Name </label> </p> 
+ <input type="text" name="name" id="inputName" placeholder="e.g. Jane Appleseed"> 
 
-  Exp. Date (MM/YY)
-  MM
-  YY
-
-  CVC
-  e.g. 123
-
-  Confirm
+ <p><label for="number"> Card Number </label> </p> 
+ <input type="text" name="number" id="inputNumber" placeholder="e.g. 1234 5678 9123 0000"> 
   
+ <div class="inline">
+ <input type="text" name="month" id="inputMonth" placeholder="MM"> 
+ <input type="text" name="year" id="inputYear" placeholder="YY"> 
+ <input type="text" name="month" id="inputCvc" placeholder="  e.g. 123"> 
+ 
+</div> 
 
+<input type="submit" value="Confirm"> 
+</form>
+</div>
   
 </div>
   <!-- Completed state start -->

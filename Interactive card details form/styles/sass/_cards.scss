@@ -1,10 +1,11 @@
 .card-page{
     font-size: 18px;
-    display: grid;
-    height: 100%;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 2rem;
-    border: 5px solid greenyellow;
+    position: $relative;
 }
 
 .front-card,
@@ -17,7 +18,7 @@
 
 .back-card{
     margin-left: auto;
-}
+} 
 
 .front-card > *:not(.front-card-bg),
 .back-card > *:not(.back-card-bg){

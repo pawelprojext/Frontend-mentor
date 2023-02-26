@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
 .card-page {
   font-size: 18px;
-  display: grid;
-  height: 100%;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 2rem;
-  border: 5px solid greenyellow;
+  position: relative;
 }
 
 .front-card,
@@ -50,6 +51,38 @@
   right: 4rem;
 }
 
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+input {
+  padding: 15px;
+  border: none;
+  border: 1px solid gray;
+  border-radius: 10px;
+  width: 80%;
+}
+
+.inline {
+  display: flex;
+  flex-direction: row;
+}
+
+#inputMonth {
+  width: 20%;
+}
+
+#inputYear {
+  width: 20%;
+}
+
+#inputCvc {
+  width: 40%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -60,7 +93,10 @@ body {
   background-image: url("");
   height: 100vh;
   font-family: "Space Grotesk", sans-serif;
-  display: flex;
+  display: grid;
+  background-image: url("/images/bg-main-desktop.png");
+  background-repeat: no-repeat;
+  background-size: 25% 100%;
 }
 
 img {
@@ -70,5 +106,5 @@ img {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 50% 50%;
 }/*# sourceMappingURL=style.css.map */

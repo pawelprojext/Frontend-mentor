@@ -1,0 +1,35 @@
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form{
+
+}
+
+input{
+    padding: 15px;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 10px;
+    width: 80%;
+}
+
+.inline{
+    display: flex;
+    flex-direction: row;
+}
+
+#inputMonth{
+    width: 20%;
+}
+
+#inputYear{
+    width: 20%;
+}
+
+#inputCvc{
+    width: 40%;
+}
