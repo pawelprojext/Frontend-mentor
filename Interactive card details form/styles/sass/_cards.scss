@@ -1,0 +1,50 @@
+.card-page{
+    font-size: 18px;
+    display: grid;
+    height: 100%;
+    width: 100%;
+    gap: 2rem;
+    border: 5px solid greenyellow;
+}
+
+.front-card,
+.back-card{
+    position: $relative;
+    color: white;
+    width: 447px;
+    height: 250px;
+}
+
+.back-card{
+    margin-left: auto;
+}
+
+.front-card > *:not(.front-card-bg),
+.back-card > *:not(.back-card-bg){
+    position: $absolute;
+}
+
+.front-card-number{
+    top: 55%;
+    right: 2rem;
+}
+
+.front-card-name{
+ bottom: $card-padding;
+ left: $card-padding;
+}
+
+.front-card-logo{
+    top: $card-padding;
+    left: $card-padding;
+}
+
+.front-card-expire{
+    bottom: $card-padding;
+    right: $card-padding;
+}
+
+.back-card-cvc{
+    top: 44%;
+    right: $card-padding * 2;
+}

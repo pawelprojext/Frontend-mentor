@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+.card-page {
+  font-size: 18px;
+  display: grid;
+  height: 100%;
+  width: 100%;
+  gap: 2rem;
+  border: 5px solid greenyellow;
+}
+
+.front-card,
+.back-card {
+  position: relative;
+  color: white;
+  width: 447px;
+  height: 250px;
+}
+
+.back-card {
+  margin-left: auto;
+}
+
+.front-card > *:not(.front-card-bg),
+.back-card > *:not(.back-card-bg) {
+  position: absolute;
+}
+
+.front-card-number {
+  top: 55%;
+  right: 2rem;
+}
+
+.front-card-name {
+  bottom: 2rem;
+  left: 2rem;
+}
+
+.front-card-logo {
+  top: 2rem;
+  left: 2rem;
+}
+
+.front-card-expire {
+  bottom: 2rem;
+  right: 2rem;
+}
+
+.back-card-cvc {
+  top: 44%;
+  right: 4rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("");
+  height: 100vh;
+  font-family: "Space Grotesk", sans-serif;
+  display: flex;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 60% 40%;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+$relative : relative;
+$absolute : absolute;
+$card-padding: 2rem;
+
+@import './cards';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('');
+    height: 100vh;
+    font-family: 'Space Grotesk', sans-serif;
+    display: flex;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+  }
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
