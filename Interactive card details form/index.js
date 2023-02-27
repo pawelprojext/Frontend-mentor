@@ -6,9 +6,17 @@ const cvcInput = document.getElementById('inputCvc');
 const button = document.querySelector('button');
 var letters = /^[A-Za-z ]+$/;
 var numbers = /^[0-9 ]+$/;
-let divs = document.getElementsByClassName("form-element, inline");
-
+const doneStage = document.getElementById('complete-container');
+const form = document.getElementById("form-container");
 const inputs = [nameInput,numberInput,yearInput,monthInput,cvcInput];
+
+let isBlank = false;
+let isGoodForm1 = false;
+let isGoodForm2 = false;
+let isMin1 = false;
+let isMin2 = false;
+let isMin3 = false;
+let isMin4 = false;
 
 nameInput.addEventListener("input", function() {
     const letterRegex = this.value.match(letters);
@@ -18,7 +26,7 @@ nameInput.addEventListener("input", function() {
     if (nameInput.value == ''){
         document.querySelector('.front-card-name').innerText = "e.g. Jane Appleseed";
     }
-})
+}) 
 numberInput.addEventListener("input", function() {
     const numberRegex = this.value.match(numbers);
     if(numberRegex){
@@ -26,6 +34,10 @@ numberInput.addEventListener("input", function() {
     }
         if (numberInput.value == ''){
             document.querySelector('.front-card-number').innerText = "0000 0000 0000 0000";
+        }
+
+        if(this.value.length == 16){
+            isMin1 = true;
         }
 })
 
@@ -37,6 +49,10 @@ monthInput.addEventListener("input", function() {
 
     if (monthInput.value == ''){
         document.querySelector('.front-card-month').innerText = "00/";
+    }
+
+    if(this.value.length == 2){
+        isMin2 = true;
     }
 })
 
@@ -50,6 +66,10 @@ yearInput.addEventListener("input", function() {
         document.querySelector('.front-card-year').innerText = "00";
     }
 
+    if(this.value.length == 2){
+        isMin3 = true;
+    }
+
 })
 
 cvcInput.addEventListener("input", function() {
@@ -61,12 +81,13 @@ cvcInput.addEventListener("input", function() {
     if (cvcInput.value == ''){
         document.querySelector('.back-card-cvc').innerText = "000";
     }
+    if(this.value.length == 3){
+        isMin3 = true;
+    }
 })
 
 button.addEventListener("click", (e)=>{
-    let isBlank = false;
-    let isGoodForm1 = false;
-    let isGoodForm2 = false;
+
     e.preventDefault();
 
     for (const input of inputs){
@@ -81,8 +102,7 @@ button.addEventListener("click", (e)=>{
         }
 
         if(input.classList.contains('numberRegex')){
-            if(input.value.match(numbers)){
-                console.log(input.value);
+            if(input.value.match(numbers)){;
                 isGoodForm1 = true;
             } 
         }
@@ -92,7 +112,14 @@ button.addEventListener("click", (e)=>{
                 isGoodForm2 = true;
             } 
         }
-        console.log('1' + isBlank, '2' +  isGoodForm1, '3' + isGoodForm2);
     }
+
+     if(isBlank == true && isGoodForm1 == true && isGoodForm2 == true && numberInput.value.length == 16 && monthInput.value.length, yearInput.value.length == 2 && cvcInput.value.length == 3){
+         doneStage.style.display = "flex";
+         form.style.display = "none";
+     } else{
+        form.classList.add('valid');
+     }
+   
 })
 
