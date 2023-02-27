@@ -5,7 +5,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
   position: relative;
 }
 
@@ -41,9 +40,19 @@
   left: 2rem;
 }
 
-.front-card-expire {
+.front-card-month {
   bottom: 2rem;
-  right: 2rem;
+  right: 4rem;
+}
+
+.front-card-year {
+  bottom: 2rem;
+  right: 2.5rem;
+}
+
+.front-card-character {
+  bottom: 2.1rem;
+  right: 3.5rem;
 }
 
 .back-card-cvc {
@@ -51,24 +60,77 @@
   right: 4rem;
 }
 
+@media screen and (max-width: 768px) {
+  .card-page {
+    position: relative;
+    height: 70vh;
+    background-image: url("/images/bg-main-mobile.png");
+    background-size: 100% 80%;
+    background-repeat: no-repeat;
+  }
+  .card-page .front-card,
+  .card-page .back-card {
+    position: absolute;
+  }
+  .card-page .front-card {
+    z-index: 1;
+    top: 32%;
+    left: 0;
+  }
+  .card-page .back-card {
+    top: 0;
+  }
+}
 .form-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-left: 50px;
 }
 
-input {
+input, button {
   padding: 15px;
   border: none;
   border: 1px solid gray;
   border-radius: 10px;
   width: 80%;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: hsl(278, 68%, 11%);
+  color: white;
+}
+button:hover {
+  cursor: pointer;
+}
+
+.blank::before {
+  content: "Cant be blank";
+  color: red;
+}
+
+.valid::before {
+  content: "Provide valid form";
+  color: red;
+}
+
+input:focus {
+  outline: none;
+  border-image-source: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+  border-width: 2px;
+  border-image-slice: 1;
+  border-radius: 0px;
+}
+
+label {
+  color: hsl(278, 68%, 11%);
 }
 
 .inline {
-  display: flex;
-  flex-direction: row;
+  display: block;
 }
 
 #inputMonth {
@@ -80,7 +142,27 @@ input {
 }
 
 #inputCvc {
-  width: 40%;
+  width: 39%;
+}
+
+.cvc-label {
+  margin-left: 15%;
+}
+
+.errorOutline {
+  outline: 1px solid red;
+}
+
+.complete-container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-left: 50px;
+}
+.complete-container > * {
+  padding: 15px;
 }
 
 * {
@@ -105,6 +187,17 @@ img {
 }
 
 .grid-container {
+  background-image: linear-gradient();
   display: grid;
   grid-template-columns: 50% 50%;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background-image: none;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */

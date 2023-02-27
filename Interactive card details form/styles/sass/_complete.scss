@@ -1,0 +1,12 @@
+.complete-container{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-left: 50px;
+    >*{
+        padding: 15px;
+    }
+}
+

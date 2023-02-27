@@ -2,9 +2,14 @@
 $relative : relative;
 $absolute : absolute;
 $card-padding: 2rem;
+$red: red;
+$borderGradient: hsl(249, 99%, 64%), hsl(278, 94%, 30%);
+$darkViolet: hsl(278, 68%, 11%); 
+$violet: hsl(279, 6%, 55%);
 
 @import './cards';
 @import './form';
+@import './complete';
 
 *{
     margin: 0;
@@ -28,6 +33,17 @@ img {
   }
 
 .grid-container{
+    background-image: linear-gradient();
     display: grid;
     grid-template-columns: 50% 50%;
+}
+
+@media screen and (max-width:768px) {
+    body{
+        background-image: none;
+    }
+    .grid-container{
+        display: grid;
+        grid-template-columns: 100%;
+    }
 }

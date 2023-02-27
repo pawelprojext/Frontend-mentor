@@ -20,7 +20,8 @@
         <img class = "front-card-logo" src="images/card-logo.svg" alt="logo">
       <span class="front-card-number"> 0000 0000 0000 0000 </span>
       <span class="front-card-name">Jane Appleseed </span>
-      <span class="front-card-expire">00/00</span> 
+      <span class="front-card-month">00/</span> 
+      <span class="front-card-year">00</span> 
 </div>
 
   <div class="back-card">
@@ -32,29 +33,42 @@
 <div class="form-container">
  
  <form>
+  <div class="form-element ">
  <p><label for="name"> Cardholder Name </label> </p> 
- <input type="text" name="name" id="inputName" placeholder="e.g. Jane Appleseed"> 
+ <input type="text" class="letterRegex" name="name" id="inputName" placeholder="e.g. Jane Appleseed" maxlength="30"> 
+</div>
 
+<div class="form-element ">
  <p><label for="number"> Card Number </label> </p> 
- <input type="text" name="number" id="inputNumber" placeholder="e.g. 1234 5678 9123 0000"> 
-  
- <div class="inline">
- <input type="text" name="month" id="inputMonth" placeholder="MM"> 
- <input type="text" name="year" id="inputYear" placeholder="YY"> 
- <input type="text" name="month" id="inputCvc" placeholder="  e.g. 123"> 
+ <input type="text" name="number" class="numberRegex" id="inputNumber" placeholder="e.g. 1234 5678 9123 0000" minlength="16" maxlength="16"> 
+</div>
+
+ <div class="inline form-element ">
+  <p><label for="month-year">EXP. DATE (MM/YY)</label> <label class="cvc-label" for="cvc">CVC</label></p>
+ <input type="text" class="numberRegex" name="month" id="inputMonth" placeholder="MM" minlength="2" maxlength="2"> 
+ <input type="text" class="numberRegex" name="year" id="inputYear" placeholder="YY" minlength="2" maxlength="2"> 
+ <input type="text" class="numberRegex" name="month" id="inputCvc" placeholder="  e.g. 123" minlength="3" maxlength="3"> 
  
 </div> 
 
-<input type="submit" value="Confirm"> 
+<button>Confirm</button>
 </form>
 </div>
   
-</div>
-  <!-- Completed state start -->
-<!-- 
-  Thank you!
-  We've added your card details
-  Continue -->
+<div class="complete-container">
 
+  <img src="images/icon-complete.svg" alt="complete">
+  <h2>Thank you!</h2>
+
+  
+ <p> We've added your card details </p>
+  <button> Continue </button>
+</div>
+
+</div>
+ 
+
+
+  <script src="index.js"></script>
 </body>
 </html>

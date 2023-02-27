@@ -4,7 +4,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
     position: $relative;
 }
 
@@ -27,7 +26,7 @@
 
 .front-card-number{
     top: 55%;
-    right: 2rem;
+    right: $card-padding;
 }
 
 .front-card-name{
@@ -40,12 +39,44 @@
     left: $card-padding;
 }
 
-.front-card-expire{
+.front-card-month{
     bottom: $card-padding;
-    right: $card-padding;
+    right: $card-padding * 2;
+}
+
+.front-card-year{
+    bottom: $card-padding;
+    right: $card-padding + 0.5rem;
+}
+
+.front-card-character{
+    bottom: $card-padding + 0.1rem;
+    right: $card-padding + 1.5rem;
 }
 
 .back-card-cvc{
     top: 44%;
     right: $card-padding * 2;
+}
+
+@media screen and (max-width:768px) {
+    .card-page{
+        position: $relative;
+        height: 70vh;
+        background-image: url('/images/bg-main-mobile.png');
+        background-size: 100% 80%;
+        background-repeat: no-repeat;
+        .front-card,
+        .back-card{
+            position: $absolute;
+        }
+        .front-card{
+            z-index: 1;
+            top: 32%;
+            left: 0;
+        }
+        .back-card{
+            top:0;
+        }
+    }
 }
