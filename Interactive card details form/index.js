@@ -30,7 +30,9 @@ nameInput.addEventListener("input", function() {
 numberInput.addEventListener("input", function() {
     const numberRegex = this.value.match(numbers);
     if(numberRegex){
-        document.querySelector('.front-card-number').innerHTML = this.value
+        let inputValue = this.value;
+        let spaced = inputValue.match(/.{1,4}/g)
+        document.querySelector('.front-card-number').innerHTML = spaced.join(' ');
     }
         if (numberInput.value == ''){
             document.querySelector('.front-card-number').innerText = "0000 0000 0000 0000";
