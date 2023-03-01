@@ -1,0 +1,30 @@
+.messages-container{
+    .notification{
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+       
+        .image{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+                width: 50%;
+                border: 1px solid gray;
+                border-radius: 50%;
+            }
+        }
+        
+    p::after{
+        color: gray;
+        content: "3 min ago";
+        display: flex;
+    }
+}
+.unread{
+    background-color: hsl(205, 33%, 90%);
+    border-radius: 10px;
+}
+}
+

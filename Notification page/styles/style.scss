@@ -1,0 +1,29 @@
+@font-face {
+    font-family: Jakarta;
+    src: url('../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf');
+}
+
+@import './sass/info';
+@import './sass/cards';
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Jakarta, sans-serif;
+    background-color: hsl(211, 68%, 94%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.main-container{
+    margin: 3rem;
+    background-color: white;
+    border-radius: 20px;
+    width: 60%;
+    padding: 3rem;
+}

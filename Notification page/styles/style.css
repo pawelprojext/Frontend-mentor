@@ -1,0 +1,73 @@
+@font-face {
+  font-family: Jakarta;
+  src: url("../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf");
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.info .Big {
+  font-weight: 900;
+  color: black;
+  font-size: 1.5rem;
+}
+.info span {
+  padding: 5px 10px 5px 10px;
+  background-color: hsl(219, 12%, 42%);
+  border-radius: 10px;
+}
+.info :last-child {
+  color: hsl(219, 14%, 63%);
+}
+.info :last-child:hover {
+  cursor: pointer;
+}
+
+.messages-container .notification {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+.messages-container .notification .image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.messages-container .notification .image img {
+  width: 50%;
+  border: 1px solid gray;
+  border-radius: 50%;
+}
+.messages-container .notification p::after {
+  color: gray;
+  content: "3 min ago";
+  display: flex;
+}
+.messages-container .unread {
+  background-color: hsl(205, 33%, 90%);
+  border-radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Jakarta, sans-serif;
+  background-color: hsl(211, 68%, 94%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.main-container {
+  margin: 3rem;
+  background-color: white;
+  border-radius: 20px;
+  width: 60%;
+  padding: 3rem;
+}/*# sourceMappingURL=style.css.map */

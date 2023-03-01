@@ -1,0 +1,24 @@
+.info{
+    display: flex;
+    justify-content: space-between;
+
+    .Big{
+        font-weight: 900;
+        color: black;
+        font-size: 1.5rem;
+    }
+
+    span{
+        padding: 5px 10px 5px 10px;
+        background-color: hsl(219, 12%, 42%);
+        border-radius: 10px;
+    }
+
+    :last-child{
+        color: hsl(219, 14%, 63%);
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    margin-bottom: 2rem;
+}
