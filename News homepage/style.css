@@ -1,0 +1,295 @@
+@font-face {
+    font-family: Inter;
+    src: url('./assets/fonts/Inter-VariableFont_slnt\,wght.ttf');
+}
+
+@keyframes rotateX {
+    0% {
+
+        transform: scaleY(0)
+
+    }
+
+    80% {
+
+        transform: scaleY(1.1)
+
+    }
+
+    100% {
+
+        transform: scaleY(1)
+
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Inter, sans-serif;
+}
+
+.width-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container{
+    width: 80%;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.nav a {
+    color: hsl(236, 13%, 42%);
+    text-decoration: none;
+    padding: 1rem;
+    transition: all 500ms;
+}
+
+.nav a:hover {
+   color: hsl(5, 85%, 63%);
+}
+
+.mobileOff{
+    display: flex;
+    flex-grow: 1;
+}
+
+.mobileOff a:nth-of-type(1){
+    margin-left: auto;
+}
+
+.hide > *:not(img){
+    animation: rotateX 300ms ease-in-out forwards;
+    position: absolute;
+    padding: 1rem !important;
+    width: 60%;
+    background-color: white;
+    right: 0;
+    top: 0;
+    opacity: 1;
+    z-index: 1;
+    height: 100%;
+}
+
+.hide > img{
+    padding: 1rem;
+}
+
+.hide a{
+    margin-left: auto;
+}
+
+.mobile{
+    display: none;
+    flex-direction: column;
+}
+
+.mobile a {
+    color: black;
+    text-decoration: none;
+    padding: 1rem;
+    transition: all 500ms;
+}
+
+.mobile a:hover {
+    color: hsl(5, 85%, 63%);
+ }
+
+.mobile > img{
+    display: none;
+    margin-left: auto;
+    padding: 1rem;
+}
+
+.mobileOff > img{
+    display: none;
+}
+
+.grid-layout{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+    gap: 1rem;
+    position: relative;
+}
+
+.smallArticle{
+    width: 65%;
+    gap: 1rem;
+}
+
+article > img{
+    width: 100%;
+}
+
+.centerOfArticle{
+    margin-top: 1rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 50% 50%;
+}
+
+.centerOfArticle h2{
+    font-size: 3rem;
+    padding: 0;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.content p{
+    font-size: 1.1rem;
+    color: hsl(236, 13%, 42%);
+}
+
+
+.content a {
+    margin-top: auto;
+    text-align: center;
+    width: 50%;
+    padding: 1rem;
+    color: hsl(36, 100%, 99%);
+    text-decoration: none;
+    letter-spacing: 1px;
+    background-color: hsl(5, 85%, 63%);
+    transition: 500ms all;
+}
+
+.content a:hover{
+    background-color:hsl(240, 100%, 5%);
+}
+
+.smallArticle{
+    display: flex;
+    justify-content: center;
+    background-color: hsl(240, 100%, 5%);
+}
+
+.header{
+    color: hsl(35, 77%, 62%);
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.title{
+    color: white;
+    padding: 1rem 0 0.5rem 0;
+    font-size: 1.2rem;
+    transition: 500ms all;
+}
+
+.articleContent{
+    padding-bottom: 1rem;
+    color: hsl(233, 8%, 79%);
+}
+
+section{
+    border-bottom: 1px solid gray;
+}
+
+section:hover{
+    cursor: pointer;
+}
+
+section:hover .title{
+    color: hsl(35, 77%, 62%);
+}
+
+section:last-child{
+    border: none;
+}
+
+.flex-layout{
+    display: flex;
+    margin-top: 2rem;
+}
+
+.numericArticle{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.numericArticle img {
+    width: 80%;
+}
+
+.numericArticleContent{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+}
+
+.numericArticleContent h3{
+    font-size: 2rem;
+    color: hsl(233, 8%, 79%);
+}
+
+.numericArticleContent b {
+    font-size: 1.3rem;
+}
+
+.openMenu{
+    display: none;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+@media screen and (max-width:768px) {
+.centerOfArticle{
+    display: flex;
+    flex-wrap: wrap;
+}
+.grid-layout{
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.smallArticle{
+    width: 100%;
+}
+.flex-layout{
+    flex-direction: column
+}
+
+.numericArticle{
+    padding: 1rem;
+}
+
+.mobileOff{
+    display: none;
+}
+
+.openMenu{
+    display: block;
+}
+
+
+.mobile > img{
+    display: block;
+}
+
+.mobile{
+    display: flex;
+}
+}
