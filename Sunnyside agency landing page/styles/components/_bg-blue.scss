@@ -1,0 +1,26 @@
+.bg-blue{
+    background-image: url('../images/desktop/image-header.jpg');
+    background-size: 90%;
+    background-position: center;
+    height: 100vh;
+    padding: $padding;
+    font-family: $fraunce;
+    .textcontent-bg-blue{
+        text-align: center;
+        color: white;
+        font-size: $padding * 1.5;
+        :last-child{
+            margin-top: $padding * 3;
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .bg-blue{
+        .textcontent-bg-blue{
+            :last-child{
+                margin-top: 1rem;
+            }
+        }
+    }
+}

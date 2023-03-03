@@ -1,0 +1,84 @@
+.card{
+    display: grid;
+    align-items: center; 
+    grid-template-columns: 50% 50%;
+    .card-content{
+        padding: 0 3rem 0 3rem;
+        h2{
+            font-size: $padding * 1.8;
+            font-family: $fraunce;
+            font-weight: 600;
+            color: hsl(212, 27%, 19%);
+        }
+        p{
+           color: hsl(213, 9%, 39%);
+           font-size: 18px;
+           margin-bottom: 2rem;
+        }
+
+        a{
+          color:hsl(212, 27%, 19%);  
+          font-family: $fraunce;
+          font-size: 20px;
+          text-decoration: 5px underline solid hsl(7, 99%, 70%);
+        }
+    }
+    .image{
+        >*{
+            width: 100%;
+        }
+    }
+}
+
+.ad{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    position: relative;
+    margin-top: -3px;
+.wrapper{
+    position: relative;
+    .ad-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        >img{
+            width: 100%;
+        }
+
+        >*:not(.bg){
+            position: absolute;
+        }
+
+        h3{
+            font-family: $fraunce;
+            font-size: $padding;
+            color: hsl(212, 27%, 19%);
+            bottom: 9rem;
+         }
+     p{
+     font-size: 18px;
+     color:hsl(213, 9%, 39%);
+     bottom: 2rem;
+     right: $padding*2;
+     left: $padding*2;
+     }
+
+    }
+}
+}
+
+@media screen and (max-width:768px) {
+    .card,.ad{
+       grid-template-columns: 100%;
+       text-align: center;
+       .card-content{
+        padding: $padding * 1.5;
+       }
+    }
+    .image{
+        grid-column: 1;
+        grid-row:1;
+    }
+}

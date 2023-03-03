@@ -1,0 +1,109 @@
+@keyframes slideDown {
+    0% { 
+      opacity: 0;
+      transform: translateY(-60px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+nav{
+    margin-bottom: 2rem;
+    >*{
+        color: white;
+        text-decoration: none;
+        height:100%;
+        padding: $padding - 1rem;
+    }
+    p{
+        font-size: $padding;
+    }
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    .links{
+
+        >*{
+            color: white;
+            text-decoration: none;
+            height:100%;
+            padding: $padding - 1rem;
+        }
+        >a:last-child{
+            background-color: white;
+            color: hsl(212, 27%, 19%);
+            border-radius: 25px;
+            padding: $padding - 1rem, $padding - 0.8rem, $padding - 1rem, $padding - 0.8rem;
+            text-align: center;
+            transition: 500ms all;
+            &:hover{
+                background-color: #acd6eb;
+            }
+        }
+    }
+}
+
+.nav,.mobile{
+i{
+    font-size: 4rem;
+     display: none;
+    position: relative;
+    width: 64px;
+    height: 64px;
+    &:hover{
+        cursor: pointer;
+    }
+}
+}
+
+.mobile{
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    .links{
+        animation: slideDown 300ms ease-in-out forwards;
+    }
+}
+
+.mobile >*:not(p,i){
+    display: flex;
+    margin-top: 1.9rem;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    gap: 2rem;
+    left: 2rem; 
+    position: absolute;
+    border-radius: 5px;
+    width: 90%;
+    height: 35vh;
+    margin-top: 20rem;
+    
+    a{
+        text-decoration: none;
+        color: hsl(232, 10%, 55%);
+    }
+}
+
+@media screen and (max-width:768px) {
+    .nav>*:not(p){
+        display: none;
+    }
+
+    .nav,.mobile{
+        i{
+            display: block;
+        }
+        }
+        .mobile{
+            display: flex;
+        }
+}

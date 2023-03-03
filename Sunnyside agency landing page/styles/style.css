@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700&display=swap");
+.bg-blue {
+  background-image: url("../images/desktop/image-header.jpg");
+  background-size: 90%;
+  background-position: center;
+  height: 100vh;
+  padding: 2rem;
+  font-family: "Fraunces", serif;
+}
+.bg-blue .textcontent-bg-blue {
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+}
+.bg-blue .textcontent-bg-blue :last-child {
+  margin-top: 6rem;
+}
+
+@media screen and (max-width: 768px) {
+  .bg-blue .textcontent-bg-blue :last-child {
+    margin-top: 1rem;
+  }
+}
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+nav {
+  margin-bottom: 2rem;
+}
+nav > * {
+  color: white;
+  text-decoration: none;
+  height: 100%;
+  padding: 1rem;
+}
+nav p {
+  font-size: 2rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10vh;
+}
+.nav .links > * {
+  color: white;
+  text-decoration: none;
+  height: 100%;
+  padding: 1rem;
+}
+.nav .links > a:last-child {
+  background-color: white;
+  color: hsl(212, 27%, 19%);
+  border-radius: 25px;
+  padding: 1rem, 1.2rem, 1rem, 1.2rem;
+  text-align: center;
+  transition: 500ms all;
+}
+.nav .links > a:last-child:hover {
+  background-color: #acd6eb;
+}
+
+.nav i, .mobile i {
+  font-size: 4rem;
+  display: none;
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+.nav i:hover, .mobile i:hover {
+  cursor: pointer;
+}
+
+.mobile {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+}
+.mobile .links {
+  animation: slideDown 300ms ease-in-out forwards;
+}
+
+.mobile > *:not(p, i) {
+  display: flex;
+  margin-top: 1.9rem;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  gap: 2rem;
+  left: 2rem;
+  position: absolute;
+  border-radius: 5px;
+  width: 90%;
+  height: 35vh;
+  margin-top: 20rem;
+}
+.mobile > *:not(p, i) a {
+  text-decoration: none;
+  color: hsl(232, 10%, 55%);
+}
+
+@media screen and (max-width: 768px) {
+  .nav > *:not(p) {
+    display: none;
+  }
+  .nav i, .mobile i {
+    display: block;
+  }
+  .mobile {
+    display: flex;
+  }
+}
+.card {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 50% 50%;
+}
+.card .card-content {
+  padding: 0 3rem 0 3rem;
+}
+.card .card-content h2 {
+  font-size: 3.6rem;
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  color: hsl(212, 27%, 19%);
+}
+.card .card-content p {
+  color: hsl(213, 9%, 39%);
+  font-size: 18px;
+  margin-bottom: 2rem;
+}
+.card .card-content a {
+  color: hsl(212, 27%, 19%);
+  font-family: "Fraunces", serif;
+  font-size: 20px;
+  -webkit-text-decoration: 5px underline solid hsl(7, 99%, 70%);
+          text-decoration: 5px underline solid hsl(7, 99%, 70%);
+}
+.card .image > * {
+  width: 100%;
+}
+
+.ad {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  position: relative;
+  margin-top: -3px;
+}
+.ad .wrapper {
+  position: relative;
+}
+.ad .wrapper .ad-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.ad .wrapper .ad-container > img {
+  width: 100%;
+}
+.ad .wrapper .ad-container > *:not(.bg) {
+  position: absolute;
+}
+.ad .wrapper .ad-container h3 {
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  color: hsl(212, 27%, 19%);
+  bottom: 9rem;
+}
+.ad .wrapper .ad-container p {
+  font-size: 18px;
+  color: hsl(213, 9%, 39%);
+  bottom: 2rem;
+  right: 4rem;
+  left: 4rem;
+}
+
+@media screen and (max-width: 768px) {
+  .card, .ad {
+    grid-template-columns: 100%;
+    text-align: center;
+  }
+  .card .card-content, .ad .card-content {
+    padding: 3rem;
+  }
+  .image {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}
+.testimonals {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10%;
+}
+.testimonals .testimonals-container {
+  width: 80%;
+}
+.testimonals .testimonals-container .clients-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+}
+.testimonals .testimonals-container .clients-container .client {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 1.5rem;
+}
+.testimonals .testimonals-container .clients-container .client img {
+  border-radius: 50%;
+}
+.testimonals .testimonals-container .clients-container .client p {
+  color: hsl(232, 10%, 55%);
+}
+.testimonals .testimonals-container .clients-container .client p:nth-of-type(1) {
+  font-size: 1.2rem;
+}
+.testimonals .testimonals-container .clients-container .client b {
+  font-family: "Fraunces", serif;
+  color: hsl(212, 27%, 19%);
+  font-size: 1.1rem;
+}
+.testimonals h4 {
+  text-align: center;
+  font-size: 2rem;
+  color: hsl(232, 10%, 55%);
+  padding: 2rem;
+  letter-spacing: 1px;
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+}
+
+@media screen and (max-width: 768px) {
+  .clients-container {
+    flex-wrap: wrap;
+  }
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  margin-top: 10%;
+}
+.gallery > img {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+footer {
+  background-color: #8bd0db;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer h4 {
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  padding: 2rem;
+  color: #2C7566;
+  font-weight: 900;
+}
+footer .footer-links {
+  display: block;
+  padding: 2rem;
+}
+footer .footer-links > * {
+  padding: 1rem;
+  color: #4f9384;
+  text-decoration: none;
+}
+footer .images > * {
+  padding: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+}
+
+.bg-blue {
+  background-image: url("../images/desktop/image-header.jpg");
+  background-size: cover;
+}/*# sourceMappingURL=style.css.map */

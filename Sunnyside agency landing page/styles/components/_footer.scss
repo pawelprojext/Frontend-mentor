@@ -1,0 +1,31 @@
+footer{
+    background-color: #8bd0db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h4{
+        font-family: $fraunce;
+        font-size: $padding;
+        padding: $padding;
+        color: #2C7566;
+        font-weight: 900;
+    }
+
+    .footer-links{
+        display: block;
+        padding: $padding;
+        >*{
+            padding: $padding - 1rem;
+            color: #4f9384;
+            text-decoration: none;
+        }
+    }
+
+    .images{
+        >*{
+            padding: $padding - 1rem;
+        }
+    }
+}
