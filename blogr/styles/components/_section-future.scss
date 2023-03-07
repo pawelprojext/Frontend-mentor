@@ -1,0 +1,56 @@
+.future{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 6rem;
+    h2{
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .future-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .left__future{
+            width: 100%;
+            padding-top: 5rem;
+            article{
+                padding: 2rem;
+                display: grid;
+
+                h4{
+                    padding: 1rem 0 1rem 0;
+                    font-size: 1.5rem;
+                }
+                p{
+                    color: #6a6e71;
+                }
+            }
+        }
+        .right__future{
+            >*{
+                width: 150%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+.future{
+    .future-container{
+        flex-wrap: wrap-reverse;
+        .left__future{
+            text-align: center;
+            padding-top: 0;
+        }
+        .right__future{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            >*{
+                width: 100% !important;
+            }
+        }
+    }     
+  }
+}

@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Overpass', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.bg-image{
+   background-image: url("../images/bg-pattern-intro-desktop.svg"),
+    linear-gradient(90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    background-position: center;
+    background-size: auto;
+    border: none;
+    border-radius: 0 0 0 10%;
+}
+
+.bg-container{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 3rem;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+} 
+
+.buttons{
+    display: inline-flex;
+}
+
+@import './components/nav';
+@import './components/bg-intro-content';
+@import './components/section-future';
+@import './components/section-art';
+@import './components/section-tooling';
