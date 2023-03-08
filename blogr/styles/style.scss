@@ -21,7 +21,7 @@ body{
 }
 
 .bg-container{
-    width: 80%;
+    padding: 4rem;
     margin: 0 auto;
     padding-top: 3rem;
 }
@@ -41,3 +41,4 @@ a{
 @import './components/section-future';
 @import './components/section-art';
 @import './components/section-tooling';
+@import './components/footer';

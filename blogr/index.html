@@ -18,10 +18,16 @@
     <img src="/images/logo.svg" alt="logo">
   </div>
   
-  <div class="nav__dropdown-containers">
-  <div class="nav__dropdown">
+
+<div class="nav__mobile-open-btn">
+  <img src="/images/icon-hamburger.svg" alt="icon-hamburger">
+</div>
+
+
+  <div class="nav__dropdown-containers nav__mobile-containers">
+  <div class="nav__dropdown nav__mobile-container">
   <a href="#" class="open"> Product <img src="/images/icon-arrow-light.svg" alt="arrow"> </a>
-    <div class="nav__dropdown-content hide">
+    <div class="nav__dropdown-content hide nav__mobile-dropdown-content">
       <a href="">Overview</a>   
       <a href="">Pricing</a>   
       <a href="">Marketplace</a>   
@@ -30,9 +36,9 @@
     </div>
   </div>
 
-  <div class="nav__dropdown">
+  <div class="nav__dropdown nav__mobile-container">
     <a href="#" class="open"> Company <img src="/images/icon-arrow-light.svg" alt="arrow"> </a>
-      <div class="nav__dropdown-content hide">
+      <div class="nav__dropdown-content hide nav__mobile-dropdown-content">
         <a href="">About</a>   
         <a href="">Team</a>   
         <a href="">Blog</a>    
@@ -40,14 +46,18 @@
       </div>
     </div>
 
-  <div class="nav__dropdown">
+  <div class="nav__dropdown nav__mobile-container">
     <a href="#" class="open"> Connect <img src="/images/icon-arrow-light.svg" alt="arrow"> </a>
-      <div class="nav__dropdown-content hide">
+      <div class="nav__dropdown-content hide nav__mobile-dropdown-content">
         <a href="">Contact</a>   
         <a href="">Newsletter</a>   
         <a href="">LinkedIn</a>     
       </div>
     </div>
+    <div class="buttons-mobile">
+      <a href="#">Login</a> 
+      <a href="#" class="bg-btn">Sign Up</a>
+      </div>
   </div>
 
   <div class="buttons">
@@ -144,31 +154,42 @@
 
 </div>
   </section>
-
   </main>
-  <!--
+  
+
+  <footer>
+
+  <div class="footer__container">
+    <div>
+      <img src="/images/logo.svg" alt="logo">
+    </div>
+  <ul>
   Product
+<li>Overview</li>
+<li>Pricing</li>
+<li>Marketplace</li>
+<li>Features</li>
+<li>Integrations</li>
+</ul>
 
-  Overview
-  Pricing
-  Marketplace
-  Features
-  Integrations
-
+<ul>
   Company
 
-  About
-  Team
-  Blog
-  Careers
+  <li>About</li>
+  <li>Team</li>
+  <li>Blog</li>
+  <li>Careers</li>
+</ul>
 
+<ul>
   Connect
-  
-  Contact
-  Newsletter
-  LinkedIn -->
+  <li>Contact</li>
+  <li>Newsletter</li>
+  <li>LinkedIn</li>
+</ul>
 
-
+</div>
+</footer>
   <script src="index.js"></script>
 </body>
 </html>

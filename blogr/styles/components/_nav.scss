@@ -1,9 +1,18 @@
 .nav{
-    display: inline-flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
+    position: relative;
+
+    .nav__mobile-open-btn{
+        display: none;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
     .nav__dropdown-containers{
         padding-left: 3rem;
         flex-grow: 1;
@@ -47,6 +56,9 @@
                 display: block;
             }
         }
+        .buttons-mobile{
+            display: none;
+        }
     }
 }
 .bg-btn{
@@ -69,6 +81,63 @@
         .buttons{
             :first-child{
                 padding: 1rem 1rem 1rem 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:720px) {
+    .nav{
+        .nav__dropdown-containers,.buttons{
+            display: none;
+        }
+
+        .nav__mobile-open-btn{
+            display: block;
+            position: relative;
+            
+        }
+
+        .nav__mobile-containers{
+            padding-left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            position: absolute; 
+            top: 3rem;
+            left: 0;
+            right: 0;
+            height: 100vh;
+            border-radius: 2rem;
+            transition: all 0.5s ease-in;
+            .nav__mobile-container{
+                width: 80%;
+                margin: 0 auto;
+                height: vh;
+                >*{
+                    color: black !important;
+                }
+                .nav__mobile-dropdown-content{
+                    color: red;
+                    background-color: #939ba1;
+                    width: 100%;
+                    margin: auto;
+                   text-align: center;
+                }
+            }
+            .buttons-mobile{
+                display: grid;
+                justify-content: center;
+                width: 80%;
+                border-top: 1px solid gray;
+                .bg-btn{
+                    background-image:  linear-gradient(90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+                    color: white !important;
+                }
+                >a{
+                    color: black;
+                }
             }
         }
     }

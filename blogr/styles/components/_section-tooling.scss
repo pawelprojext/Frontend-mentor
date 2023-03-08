@@ -2,35 +2,32 @@
     width: 80%;
     margin: 0 auto;
     padding-top: 6rem;
-    h2{
-        text-align: center;
-        font-size: 2rem;
-    }
-
+    
     .tooling-container{
         display: flex;
         justify-content: space-between;
         align-items: center;
         .right__tooling{
-            width: 100%;
             padding-top: 5rem;
             article{
                 padding: 2rem;
-                display: grid;
-
+                gap: 2rem;
                 h4{
                     padding: 1rem 0 1rem 0;
                     font-size: 1.5rem;
                 }
                 p{
                     color: #6a6e71;
+                    line-height: 1.2;
                 }
             }
         }
         .left__tooling{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 150%;
             >*{
-                -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
                 width: 150%;
             }
         }
@@ -40,15 +37,12 @@
 @media screen and (max-width:768px) {
 .tooling{
     .tooling-container{
-        flex-wrap: wrap-reverse;
+        flex-wrap: wrap;
         .right__tooling{
             text-align: center;
             padding-top: 0;
         }
         .left__tooling{
-            display: flex;
-            justify-content: center;
-            align-items: center;
             >*{
                 width: 100% !important;
             }

@@ -1,0 +1,32 @@
+footer{
+    background-color: #24242c;
+    border-radius: 0 10% 0 0;
+    .footer__container{
+        display: inline-flex;
+        justify-content: space-around;
+        width: 80%;
+        margin: 0 auto;
+        padding: 2rem;
+        color: white;
+ul{
+    display: grid;
+    gap: 1rem;
+}
+        ul > li{
+            list-style-type: none;
+            color: #adadb5;
+        }
+    }
+}
+
+@media screen and (max-width:680px) {
+    .footer__container{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+}
