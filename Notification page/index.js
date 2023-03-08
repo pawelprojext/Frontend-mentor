@@ -2,6 +2,7 @@ const markAll = document.querySelector('.mark');
 const notifications = document.querySelectorAll('.notification');
 const span = document.querySelector('span');
 const unreaded = [];
+const readed = [];
 
 Array.from(notifications).forEach((element, index)=>{
     
@@ -35,10 +36,10 @@ markAll.addEventListener("click", (e)=>{
 
     //  PROBA LEPSZEJ SOLUCJI
 
-    //     unreaded.forEach((element)=>{
-    //     const index = unreaded.indexOf(element);
-    //     element.classList.remove('unread');
-    //     unreaded.pop(element);
-    //     checkNotifiactions();
-    // })
+        unreaded.forEach((element)=>{
+        element.classList.remove('unread');    
+    })
+    unreaded.clear();
+    console.log(unreaded.length);   
+    checkNotifiactions();
 });
