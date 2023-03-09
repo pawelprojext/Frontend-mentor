@@ -22,6 +22,7 @@
             color: var(--almost-black);
         }
         li{
+            position: relative;
             a{
                 color: var(--medium-gray);
                 transition: 350ms;
@@ -31,7 +32,7 @@
             }
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            gap: 2rem;
             .open[data-visible="false"]{
                 &::after{
                     content: "";
@@ -52,12 +53,16 @@
             }
 
             .nav-dropdown-content{
+                top: 3rem;
                 display: grid;
                 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
                 gap: 1.5rem;
                 padding: 1rem;
                 border-radius: .75rem;
                 background-color: white;
+                @media (min-width:840px) {
+                    position: absolute;
+                }
                 a{
                     gap: .5rem;
                 }

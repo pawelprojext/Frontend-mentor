@@ -135,9 +135,10 @@ nav {
   color: var(--almost-black);
 }
 .primary-header .primary-navigation li {
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
 }
 .primary-header .primary-navigation li a {
   color: var(--medium-gray);
@@ -161,12 +162,18 @@ nav {
   background-image: url(/images/icon-arrow-up.svg);
 }
 .primary-header .primary-navigation li .nav-dropdown-content {
+  top: 3rem;
   display: grid;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   gap: 1.5rem;
   padding: 1rem;
   border-radius: 0.75rem;
   background-color: white;
+}
+@media (min-width: 840px) {
+  .primary-header .primary-navigation li .nav-dropdown-content {
+    position: absolute;
+  }
 }
 .primary-header .primary-navigation li .nav-dropdown-content a {
   gap: 0.5rem;
@@ -250,33 +257,39 @@ nav {
   gap: 1.5rem;
   text-align: center;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
   .text-content {
     grid-template-columns: repeat(2, 1fr);
     text-align: left;
   }
 }
 .text-content .text {
-  display: grid;
-  gap: 1rem;
   padding: 1rem;
+  display: grid;
   font-family: var(--ff);
 }
 @media screen and (min-width: 600px) {
   .text-content .text {
+    display: flex;
+    flex-direction: column;
     grid-column: 1;
     grid-row: 1;
-    place-content: center;
     padding: 0.5rem;
   }
+}
+.text-content .text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
 @media screen and (min-width: 600px) {
   .text-content .image-container {
     grid-column: 2;
   }
   .text-content .image-container img {
-    width: 100%;
-    max-height: 800px;
+    width: 80%;
+    margin: 0 auto;
   }
 }
 .text-content h2 {
@@ -300,13 +313,20 @@ nav {
 }
 .text-content a {
   width: 50%;
-  display: flex;
-  justify-content: center;
   text-decoration: none;
   color: white;
+  margin: 0 auto;
   background-color: var(--almost-black);
   padding: 1rem;
   border-radius: 0.5rem;
+  margin-top: 2rem;
+}
+@media screen and (min-width: 600px) {
+  .text-content a {
+    margin: 0;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
 }
 .text-content .flex-group {
   display: grid;
