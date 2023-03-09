@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- my css -->
+    <link rel="stylesheet" href="styles/main.css" />
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  </head>
+  <body>
+    <main>
+
+      <header class="primary-header">
+        <div class="header-image">
+          <img src="/images/logo.svg" alt="logo">
+        </div>
+
+        <button data-visible="false" class="nav-mobile-open">
+          <span class="sr-only">Menu</span>
+        </button>
+        <nav>
+          <ul data-visible="false" class="primary-navigation">
+          <li>
+            <a href="#" class="open margin" data-visible="false">Features</a>
+
+            <div class="nav-dropdown-content hide">
+              <a href="#"><img src="/images/icon-todo.svg" alt="todo">Todo List</a>   
+              <a href="#"><img src="/images/icon-calendar.svg" alt="calendar">Calendar</a>   
+              <a href="#"><img src="/images/icon-reminders.svg" alt="calendar">Reminders</a>   
+              <a href="#"><img src="/images/icon-planning.svg" alt="calendar">Plannning</a>
+            </div>
+          </li>
+          <li>
+            <a href="#" class="open" data-visible="false">Company</a>
+            <div class="nav-dropdown-content hide">
+              <a href="#">History</a>   
+              <a href="#">Our Team</a>   
+              <a href="#">Blog</a>   
+            </div>
+          </li>
+          <li><a href="#">Carrers</a></li>
+          <li><a href="#">About</a></li>
+
+          <div class="buttons">
+            <a href="#">Login</a>
+            <a href="#" class="border">Register</a>
+          </div>
+          </ul>
+        </nav>
+      </header>
+
+      <section class="text-content">
+        <div class="image-container">
+        <picture>
+          <source media="(min-width:600px)" srcset="/images/image-hero-desktop.png">
+          <img src="/images/image-hero-mobile.png" alt="image-hero-mobile">
+        </picture>
+      </div>
+        <div class="text">
+          <h2>Make remote work</h2>
+          <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar</p>
+          <a href="#" class="learn">Learn more</a>
+
+          <div class="flex-group">
+            <img src="/images/client-audiophile.svg" alt="client">
+            <img src="/images/client-databiz.svg" alt="client">
+            <img src="/images/client-maker.svg" alt="client">
+            <img src="/images/client-meet.svg" alt="client">
+          </div>
+        </div>
+      </section>
+
+  </main>
+
+  <script src="index.js"></script>
+  </body>
+</html>
