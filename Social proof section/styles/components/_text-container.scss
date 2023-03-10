@@ -1,0 +1,22 @@
+.text-container{
+    display: grid;
+    gap: 1rem;
+    text-align: center;
+    @media (min-width:600px){
+        text-align: left;
+    }
+    h1{
+        color: var(--dark-magenta);
+        line-height: 1;
+        font-size: 3rem;
+    }
+
+    p{
+        color: var(--dark-grayish-magenta);
+        font-weight: var(--fw-500);
+        font-size: 1.1rem;
+        @media (min-width:600px){
+            font-size: 1.5rem;
+        }
+    }
+}

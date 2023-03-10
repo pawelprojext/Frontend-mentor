@@ -1,0 +1,27 @@
+body{
+    font-size: var(--fs);
+    font-family: var(--ff);
+     padding-top: 5rem;
+    background-image: 
+    url(/images/bg-pattern-top-desktop.svg),
+    url(/images/bg-pattern-bottom-desktop.svg);
+    background-position: top left, bottom right;
+    background-size: max(50%, 400px);
+    background-repeat: no-repeat;
+}
+
+main{
+    padding: 2rem;
+    @media (min-width:600px){
+        padding: 4rem;
+    }
+}
+
+.wrapper{
+    @media (min-width:600px){
+        display: grid;
+        grid-template-columns: 1.25fr 1fr;
+        gap: 1rem;
+        place-content: center;
+    }
+}

@@ -1,0 +1,48 @@
+.quotes{
+    margin-top: 2rem;
+    .quote + .quote{
+        margin-top: 1rem;
+    }
+    .quote{
+        background-color: var(--dark-magenta);
+        border-radius: .5rem;
+        padding: 2rem;
+        color: white;
+        .quote__text{
+            padding-top: 1rem;
+        }
+        .flex-group{
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            img{
+                border-radius: 50%;
+                width: 3.5rem;
+            }
+            h2{
+                font-size: 1.175rem;
+            }
+            p{
+                color: var(--soft-pink);
+            }
+        }
+    }
+}
+
+@media (min-width:703px){
+    .quotes{
+        margin-top: 6rem;
+        display: flex;
+        gap: 1rem;
+        .quote + .quote{
+            margin-top: 0rem;
+        }
+        :first-child{
+             transform: translateY(-10%);
+        }
+
+        :last-child{
+             transform: translateY(10%);
+        }
+    }
+}
