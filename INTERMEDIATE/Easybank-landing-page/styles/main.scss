@@ -1,5 +1,9 @@
 @use './components/variables';
 @use './components/reset';
 @use './components/base';
-@use './components/nav';
-@use './components/header';
+@use './components/header/header';
+@use './components/header/nav';
+@use './components/main/intro';
+@use './components/main/why-section';
+@use './components/main/articles';
+@use './components/footer';

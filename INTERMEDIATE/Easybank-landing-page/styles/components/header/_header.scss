@@ -1,0 +1,22 @@
+.primary-header{
+    padding: 2rem 6rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width:45em){
+        padding: 2rem;
+    }
+
+    .header__image{
+        flex-shrink: 0;
+    }
+}
+
+.primary-header[data-overlay]::before{
+   content: "";
+   position: fixed;
+   inset: 0;
+   background-image: linear-gradient(rgb(0 0 0 / 0), rgb(0 0 0 /0.8));
+}

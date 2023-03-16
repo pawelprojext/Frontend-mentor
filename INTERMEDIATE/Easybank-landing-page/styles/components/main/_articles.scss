@@ -1,0 +1,27 @@
+.articles{
+    padding: var(--main-padding) var(--main-padding) calc(var(--main-padding) *4) var(--main-padding);
+    background-color: var(--light-gray);
+    >h2{
+        text-align: center;
+        padding: 2rem;
+    }
+    .grid-item{
+        background-color: white;
+        display: grid;
+        gap: 1rem;
+        border-radius: 1rem;
+        overflow: hidden;
+        .grid-item__content{
+            padding: var(--main-padding);
+
+            &:hover .article__title{
+                color: var(--lime-green);
+            }
+        }
+        img{
+            object-fit: cover;
+            min-height: 100%;
+            width: 100%;
+        }
+    }
+}
