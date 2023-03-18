@@ -7,12 +7,9 @@
         flex-shrink: 1;
         >li{
             padding: .5rem;
-            &:hover{
-                border-bottom: 5px solid var(--lime-green);
-                margin-bottom: -5px;
-            }
             a{
                 &:hover{
+                    border-bottom: 5px solid var(--lime-green);
                     color: black;
                 }
             }

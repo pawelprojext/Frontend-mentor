@@ -160,11 +160,8 @@ main {
 .primary-navigation .nav__list > li {
   padding: 0.5rem;
 }
-.primary-navigation .nav__list > li:hover {
-  border-bottom: 5px solid var(--lime-green);
-  margin-bottom: -5px;
-}
 .primary-navigation .nav__list > li a:hover {
+  border-bottom: 5px solid var(--lime-green);
   color: black;
 }
 
@@ -327,10 +324,9 @@ main {
   color: var(--lime-green);
 }
 .articles .grid-item img {
-  -o-object-fit: cover;
-     object-fit: cover;
   min-height: 100%;
   width: 100%;
+  max-height: 300px;
 }
 
 .footer {
