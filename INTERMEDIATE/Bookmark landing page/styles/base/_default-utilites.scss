@@ -1,0 +1,30 @@
+body{
+    font-size: var(--fs);
+    font-family: var(--ff);
+}
+
+.gray{
+    color: var(--gray);
+}
+
+.blue-clr{
+    color: var(--main-blue);
+}
+
+.btn{
+    color: white;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.nav-footer-btn{
+    background-color: red;
+}
+
+.feature-btn{
+    background-color: var(--main-blue)
+}
+
+.flex{
+    display: flex;
+}
