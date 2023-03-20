@@ -1,4 +1,5 @@
 @use './base/variables';
 @use './base/reset';
 @use './base/default-utilites';
-@use './components/header';
+@use './components/header/header';
+@use './components/header/nav';
