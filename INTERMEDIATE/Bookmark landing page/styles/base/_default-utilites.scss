@@ -3,6 +3,11 @@ body{
     font-family: var(--ff);
 }
 
+main[data-overlay]>*,
+header[data-overlay]>.intro{
+    opacity: 0.2;
+}
+
 .gray{
     color: var(--gray);
 }
@@ -23,9 +28,20 @@ body{
 }
 
 .feature-btn{
-    background-color: var(--main-blue)
+    background-color: var(--main-blue);
+    &:hover{
+        border: 1px solid var(--main-blue);
+        color: var(--main-blue);
+        background-color: transparent;
+        margin: -1px;
+    }
 }
 
 .flex{
     display: flex;
+}
+
+.light-black{
+    color: var(--light-black);
+    font-weight: var(--fw-500);
 }

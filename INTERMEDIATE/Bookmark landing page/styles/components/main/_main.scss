@@ -1,8 +1,34 @@
 main{
-    :nth-child(1){
-        text-align: center;
+    padding: 3rem 8rem;
+    text-align: center;
+
+    @media(max-width:50em){
+        padding: 3rem 1.75rem;
     }
-    :nth-child(2){
+    .flex{
         text-align: center;
+        width: fit-content;
+        padding: 1.5rem;
+        margin: 0 auto;
+        @media(max-width:50em){
+            flex-direction: column;
+            width: 100%;
+            margin-bottom: 2rem;
+            p{
+                width: 100%;
+            }
+        }
+        .feature-item{
+            padding: 2rem;
+            border-bottom: 1px solid var(--gray);
+            &:hover:not(.active-paragraph){
+                color: var(--main-red);
+            }
+        }
+        .active-paragraph{
+            border-bottom: 5px solid var(--main-red);
+            color: black;
+            cursor: pointer;
+        }
     }
 }

@@ -7,6 +7,7 @@
         justify-content: space-between;
     }
     img{
+        z-index: 9999;
         flex-shrink: 0;
         height: fit-content;
     }
@@ -17,6 +18,7 @@
         width: 18px;
         height: 15px;
         display: none;
+        z-index: 9999;
         @media (max-width:50em){
             display: block;
             margin-left: auto;
@@ -30,7 +32,6 @@
 }
 .primary-header[data-overlay]::before{
     content: "";
-    z-index: -1;
     position: fixed;
     inset: 0;
     background-color: var(--main-blue);
