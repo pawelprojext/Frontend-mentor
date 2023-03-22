@@ -30,10 +30,13 @@
         height: 15px;
     }
 }
-.primary-header[data-overlay]::before{
-    content: "";
-    position: fixed;
-    inset: 0;
-    background-color: var(--main-blue);
-    opacity: 0.9;
+@media(max-width:50em){
+    .primary-header[data-overlay]::before{
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-color: var(--main-blue);
+        opacity: 0.9;
+    }
 }
+

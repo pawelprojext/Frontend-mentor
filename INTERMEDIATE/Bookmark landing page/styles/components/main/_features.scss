@@ -4,6 +4,7 @@
     text-align: center;
     position: relative;
     margin-bottom: 10rem;
+    max-width: 1500px;
     @media(min-width:50em){
         grid-template-columns: 1fr 1fr;
         gap: 5rem;

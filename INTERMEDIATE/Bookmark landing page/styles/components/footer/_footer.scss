@@ -1,0 +1,36 @@
+.footer{
+    background-color:#242946;
+    padding: 2rem 6rem;
+
+    .flex{
+        justify-content: space-between;
+        gap: 1rem;
+        @media(max-width:50em){
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .flex{
+            align-items: center;
+            gap: 2rem;
+            a{
+                color: white;
+                &:hover{
+                    color: var(--main-red);
+                }
+            }
+            img{
+                margin-right: 2rem;
+            }
+        }
+        .row{
+            align-items: center;
+            display: flex;
+            gap: 2rem;
+            @media(max-width:50em){
+                margin-top: 3rem;
+            }
+        }
+    }
+
+}

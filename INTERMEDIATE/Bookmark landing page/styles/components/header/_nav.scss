@@ -11,6 +11,9 @@
 .nav__list{
     display: flex;
     gap: 3rem;
+    .flex{
+        display: none;
+    }
     li{
         text-transform: uppercase;
         a:not(.btn){
@@ -40,6 +43,13 @@
         gap: 0;
         z-index: 9999;
         flex-direction: column;
+        .flex{
+            display: flex;
+            justify-content: center;
+            li{
+                border: none;
+            }
+        }
         li{            
             display: grid;
             border-top: 1px solid var(--gray);
@@ -60,6 +70,7 @@
                 font-size: 1.5rem;
                 letter-spacing: 2px;
                 margin-top: 2rem;
+                margin-bottom: 2.1rem;
             }
         }
     }

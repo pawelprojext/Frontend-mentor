@@ -1,13 +1,15 @@
 body{
     font-size: var(--fs);
     font-family: var(--ff);
+    scroll-behavior: smooth;
 }
 
-main[data-overlay]>*,
-header[data-overlay]>.intro{
-    opacity: 0.2;
+@media(max-width:50em){
+    main[data-overlay]>*,
+    header[data-overlay]>.intro{
+        opacity: 0.2;
+    }
 }
-
 .gray{
     color: var(--gray);
 }

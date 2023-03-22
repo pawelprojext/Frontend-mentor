@@ -1,0 +1,49 @@
+.newsletter-container{
+    background-color: #5266df;
+    text-align: center;
+    color: white;
+    padding: 3rem;        
+    display: grid;
+    gap: 2rem;
+    .newsletter-wrapper{
+        display: grid;
+        place-items: center;
+        gap: 2rem;
+        width: fit-content;
+        margin-inline:auto;
+        :first-child{
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            font-weight: var(--fw-500);
+        }
+        :nth-child(2){
+            font-size: 2rem;
+            font-weight: var(--fw-500);
+        }
+        .flex{
+            justify-content: center;
+            gap: 2rem;
+            width: 100%;
+            @media(max-width:50em){
+                flex-direction: column;
+            }
+            .newsletter-input{
+                border-radius: .5rem;
+                letter-spacing: 0;
+                flex-basis: 70%;
+                font-weight: lighter;
+                font-size: 1rem;
+                padding:1rem;
+            }
+            .btn{
+                font-size: 1rem;
+                &:hover{
+                    background-color: white;
+                    border: 1px solid var(--main-red);
+                    margin: -1px;
+                    color: var(--main-red);
+                }
+            }
+        }
+    }
+}
