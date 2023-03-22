@@ -18,48 +18,47 @@
   <body>
     <header class="primary-header">
       <div class="flex">
-      <img src="/images/logo-bookmark.svg" alt="logo-bookmark" />
+        <img src="/images/logo-bookmark.svg" alt="logo-bookmark" />
 
-      <button
-        class="nav-mobile-toggle"
-        aria-controls="primary-navigation"
-        data-expanded="false"
-      >
-        <span class="sr-only">Menu</span>
-      </button>
-      
-      <nav
-        class="primary-navigation"
-        id="primary-navigation"
-      >
-        <ul class="nav__list" data-visible="false">
-          <li><a href="#">Features</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#" class="btn nav-footer-btn">Login</a></li>
+        <button
+          class="nav-mobile-toggle"
+          aria-controls="primary-navigation"
+          data-expanded="false"
+        >
+          <span class="sr-only">Menu</span>
+        </button>
 
-          <div class="flex">
-            <li><img src="/images/icon-facebook.svg" alt="icon-facebook"></li>
-            <li><img src="/images/icon-twitter.svg" alt="icon-twitter"></li>
-          </div>
-        </ul>
-      </nav>
-    </div>
+        <nav class="primary-navigation" id="primary-navigation">
+          <ul class="nav__list" data-visible="false">
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#" class="btn nav-footer-btn">Login</a></li>
+
+            <div class="flex">
+              <li>
+                <img src="/images/icon-facebook.svg" alt="icon-facebook" />
+              </li>
+              <li><img src="/images/icon-twitter.svg" alt="icon-twitter" /></li>
+            </div>
+          </ul>
+        </nav>
+      </div>
       <div class="intro">
         <div class="intro-item intro-second">
           <div class="bg-right"></div>
-          <img src="/images/illustration-hero.svg"  alt="hero img">
+          <img src="/images/illustration-hero.svg" alt="hero img" />
         </div>
 
         <div class="intro-item intro-first">
-          <h1 class="intro__title ">A Simple Bookmark Manager</h1>
+          <h1 class="intro__title">A Simple Bookmark Manager</h1>
 
-          <p class="gray ">
+          <p class="gray">
             A clean and simple interface to organize your favourite websites.
             Open a new browser tab and see your sites load instantly. Try it for
             free.
           </p>
-          <div class="intro__buttons ">
+          <div class="intro__buttons">
             <a href="#" class="btn feature-btn">Get it on Chrome</a>
             <a href="#" class="btn">Get it on Firefox</a>
           </div>
@@ -67,7 +66,7 @@
       </div>
     </header>
 
-     <main>
+    <main>
       <h2 class="blue-clr">Features</h2>
 
       <p class="gray">
@@ -83,81 +82,66 @@
       </div>
 
       <div class="feature-answer feature-active" id="tab1">
+        <div class="feature-answer-image">
+          <div class="bg-left"></div>
+          <img src="/images/illustration-features-tab-1.svg" alt="tab1 image" />
+        </div>
+        <div class="feature-answer-content">
+          <h3 class="light-black">Bookmark in one click</h3>
 
-          <div class="feature-answer-image">
-            <div class="bg-left"></div>
-            <img
-              src="/images/illustration-features-tab-1.svg"
-              alt="tab1 image"
-              
-            />
-          </div>
-          <div class="feature-answer-content">
-            <h3 class="light-black ">Bookmark in one click</h3>
+          <p class="gray">
+            Organize your bookmarks however you like. Our simple drag-and-drop
+            interface gives you complete control over how you manage your
+            favourite sites.
+          </p>
 
-            <p class="gray ">
-              Organize your bookmarks however you like. Our simple drag-and-drop
-              interface gives you complete control over how you manage your
-              favourite sites.
-            </p>
-
-            <a href="#" class="btn feature-btn">More Info</a>
-
+          <a href="#" class="btn feature-btn">More Info</a>
         </div>
       </div>
 
       <div class="feature-answer" id="tab2">
-          <div class="feature-answer-image">
-            <div class="bg-left"></div>
-            <img
-              src="/images/illustration-features-tab-2.svg"
-              alt="tab2 image"
-              
-            />
-          </div>
-          <div class="feature-answer-content">
-            <h3 class="light-black ">Intelligent search</h3>
-            <p class="gray ">
-              Our powerful search feature will help you find saved sites in no
-              time at all. No need to trawl through all of your bookmarks.
-            </p>
-            <a href="#" class="btn feature-btn">More Info</a>
-          </div>
+        <div class="feature-answer-image">
+          <div class="bg-left"></div>
+          <img src="/images/illustration-features-tab-2.svg" alt="tab2 image" />
+        </div>
+        <div class="feature-answer-content">
+          <h3 class="light-black">Intelligent search</h3>
+          <p class="gray">
+            Our powerful search feature will help you find saved sites in no
+            time at all. No need to trawl through all of your bookmarks.
+          </p>
+          <a href="#" class="btn feature-btn">More Info</a>
+        </div>
       </div>
 
       <div class="feature-answer" id="tab3">
-          <div class="feature-answer-image">
-            <div class="bg-left"></div>
-            <img
-              src="/images/illustration-features-tab-3.svg"
-              alt="tab3 image"
-              
-            />
-          </div>
-          <div class="feature-answer-content">
-            <h3 class="light-black ">Share your bookmarks</h3>
-            <p class="gray opacity">
-              Easily share your bookmarks and collections with others. Create a
-              shareable link that you can send at the click of a button.
-            </p>
-            <a href="#" class="btn feature-btn">More Info</a>
-          </div>
+        <div class="feature-answer-image">
+          <div class="bg-left"></div>
+          <img src="/images/illustration-features-tab-3.svg" alt="tab3 image" />
+        </div>
+        <div class="feature-answer-content">
+          <h3 class="light-black">Share your bookmarks</h3>
+          <p class="gray opacity">
+            Easily share your bookmarks and collections with others. Create a
+            shareable link that you can send at the click of a button.
+          </p>
+          <a href="#" class="btn feature-btn">More Info</a>
+        </div>
       </div>
 
       <h2 class="light-black">Download the extension</h2>
 
       <p class="gray">
-        We’ve got more browsers in the pipeline. Please do let us know if
-        you’ve got a favourite you’d like us to prioritize.
+        We’ve got more browsers in the pipeline. Please do let us know if you’ve
+        got a favourite you’d like us to prioritize.
       </p>
 
       <section class="extensions-container">
-
         <div class="extension">
           <img src="/images/logo-chrome.svg" alt="logo-chrome" />
           <p class="blue-clr">Add to Chrome</p>
           <p class="gray">Minimum version 62</p>
-          <img src="/images/bg-dots.svg" alt="dots">
+          <img src="/images/bg-dots.svg" alt="dots" />
           <a href="" class="btn feature-btn">Add & Install Extension</a>
         </div>
 
@@ -165,7 +149,7 @@
           <img src="/images/logo-firefox.svg" alt="logo-firefox" />
           <p class="blue-clr">Add to Firefox</p>
           <p class="gray">Minimum version 55</p>
-          <img src="/images/bg-dots.svg" alt="dots">
+          <img src="/images/bg-dots.svg" alt="dots" />
           <a href="" class="btn feature-btn">Add & Install Extension</a>
         </div>
 
@@ -173,11 +157,10 @@
           <img src="/images/logo-opera.svg" alt="logo-opera" />
           <p class="blue-clr">Add to Opera</p>
           <p class="gray">Minimum version 46</p>
-          <img src="/images/bg-dots.svg" alt="dots">
+          <img src="/images/bg-dots.svg" alt="dots" />
           <a href="" class="btn feature-btn">Add & Install Extension</a>
         </div>
       </section>
-
 
       <section class="faqs-container">
         <h2 class="blue-clr">Frequently Asked Questions</h2>
@@ -187,11 +170,16 @@
           answered please feel free to email us.
         </p>
 
-
-
         <div class="faq-container">
-          <p class="faq-question">What is Bookmark? <img src="/images/icon-arrow.svg" data-expanded="hidden" alt="arrow"></p>
- 
+          <p class="faq-question">
+            What is Bookmark?
+            <img
+              src="/images/icon-arrow.svg"
+              data-expanded="hidden"
+              alt="arrow"
+            />
+          </p>
+
           <p class="gray faq-answer" data-visible="false" id="faq1">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
             tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum
@@ -199,10 +187,16 @@
           </p>
         </div>
 
-
         <div class="faq-container">
-          <p class="faq-question">How can I request a new browser? <img src="/images/icon-arrow.svg" data-expanded="hidden" alt="arrow"></p>
-          <p class="gray faq-answer"  data-visible="false" id="faq2">
+          <p class="faq-question">
+            How can I request a new browser?
+            <img
+              src="/images/icon-arrow.svg"
+              data-expanded="hidden"
+              alt="arrow"
+            />
+          </p>
+          <p class="gray faq-answer" data-visible="false" id="faq2">
             Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
             ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros
             aliquet convallis ultricies. Mauris augue massa, ultricies non
@@ -212,9 +206,15 @@
           </p>
         </div>
 
-
         <div class="faq-container">
-          <p class="faq-question">Is there a mobile app? <img src="/images/icon-arrow.svg" data-expanded="hidden" alt="arrow"></p>
+          <p class="faq-question">
+            Is there a mobile app?
+            <img
+              src="/images/icon-arrow.svg"
+              data-expanded="hidden"
+              alt="arrow"
+            />
+          </p>
 
           <p class="gray faq-answer" data-visible="false" id="faq3">
             Sed consectetur quam id neque fermentum accumsan. Praesent luctus
@@ -224,10 +224,16 @@
           </p>
         </div>
 
-        
         <div class="faq-container">
-          <p class="faq-question">What about other Chromium browsers? <img src="/images/icon-arrow.svg" data-expanded="hidden" alt="arrow"></p>
-        
+          <p class="faq-question">
+            What about other Chromium browsers?
+            <img
+              src="/images/icon-arrow.svg"
+              data-expanded="hidden"
+              alt="arrow"
+            />
+          </p>
+
           <p class="gray faq-answer" data-visible="false" id="faq4">
             Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat
             mi, at euismod dui. Aliquam vitae neque eget nisl gravida
@@ -235,31 +241,34 @@
           </p>
         </div>
 
-       <div> <a href="#" class="btn feature-btn">More Info</a> </div>
+        <div><a href="#" class="btn feature-btn">More Info</a></div>
       </section>
     </main>
-      <section class="newsletter-container">
-        <div class="newsletter-wrapper">
+    <section class="newsletter-container">
+      <div class="newsletter-wrapper">
         <p>35,000+ already joined</p>
 
         <p>Stay up-to-date with what we’re doing</p>
 
         <div class="flex">
-          <input type="text" class="newsletter-input" placeholder="Enter your email addres"/>
+          <input
+            type="text"
+            class="newsletter-input"
+            placeholder="Enter your email addres"
+          />
           <a href="#" class="btn nav-footer-btn input-btn">Contact Us</a>
         </div>
       </div>
-      </section>
-
+    </section>
 
     <footer class="footer">
       <div class="flex">
         <div class="flex">
           <img src="/images/logo-bookmark-footer.svg" alt="logo-bookmark" />
 
-          <a href="#" >Features</a>
-          <a href="#" >Pricing</a>
-          <a href="#" >Contact</a>
+          <a href="#">Features</a>
+          <a href="#">Pricing</a>
+          <a href="#">Contact</a>
         </div>
 
         <div class="row">
@@ -267,7 +276,7 @@
           <img src="/images/icon-twitter.svg" alt="icon-twitter" />
         </div>
       </div>
-    </footer> 
+    </footer>
 
     <script src="index.js"></script>
   </body>
