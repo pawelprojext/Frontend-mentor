@@ -23,9 +23,6 @@
       }
     }
   }
-  .active {
-    border-bottom: 5px solid white;
-  }
 }
 
 .nav-mobile-open{
@@ -87,7 +84,7 @@ display: none;
         position: fixed;
         inset: 0 0 0 30%;
         padding-top: 8rem;
-
+      z-index: 1;
     }
     .nav__list[data-visible="true"]{
         display: block !important;
