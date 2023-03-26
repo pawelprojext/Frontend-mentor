@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:ital,wght@0,600;1,400&family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;700&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important; /* 2 */
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important; /* 3 */
+}
+
+:root {
+  --ff-bc: "Barlow Condensed", sans-serif;
+  --ff-ba: "Barlow", sans-serif;
+  --ff-be: "Bellefair", serif;
+}
+
+.gray {
+  color: #d0d6f9;
+}
+
+.active {
+  border-bottom: 5px solid white;
+}
+
+.primary-header {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.125rem;
+  padding: 2rem 0 2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.primary-header img {
+  height: 48px;
+  width: 48px;
+}
+.primary-header .line {
+  display: none;
+}
+@media (min-width: 1100px) {
+  .primary-header .line {
+    display: block;
+    position: absolute;
+    height: 1px;
+    background-color: gray;
+    width: 50rem;
+    left: 10rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .primary-header {
+    padding: 1rem 0 1rem 1rem;
+  }
+}
+.primary-navigation .nav__list {
+  --padding: 2rem;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-backdrop-filter: blur(1rem);
+          backdrop-filter: blur(1rem);
+  padding-right: calc(var(--padding) * 5);
+  padding-left: calc(var(--padding) * 3);
+}
+.primary-navigation .nav__list li {
+  text-transform: uppercase;
+  padding: var(--padding);
+}
+.primary-navigation .nav__list li a {
+  padding: var(--padding) 0;
+  color: white;
+  height: 100%;
+  letter-spacing: 2px;
+}
+.primary-navigation .nav__list li a:hover:not(.active) {
+  border-bottom: 5px solid gray;
+}
+.primary-navigation .nav__list li a b {
+  margin-right: 0.5rem;
+}
+
+.nav-mobile-open {
+  width: 24px;
+  height: 21px;
+  border: none;
+  background-color: transparent;
+  background-image: url(/assets/shared/icon-hamburger.svg);
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: 2rem;
+  padding: 1rem;
+  z-index: 9999;
+  display: none;
+}
+@media (max-width: 768px) {
+  .nav-mobile-open {
+    display: block;
+  }
+}
+
+.nav-mobile-open[data-expanded=true] {
+  width: 20px;
+  height: 21px;
+  background-image: url(/assets/shared/icon-close.svg);
+}
+
+@media screen and (max-width: 1100px) {
+  .nav__list {
+    padding-right: 0 !important;
+    margin-top: -2rem;
+    padding-top: 1rem;
+    padding-left: 0 !important;
+  }
+}
+@keyframes slideIn {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes slideOut {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav__list {
+    display: none !important;
+    flex-direction: column;
+    position: fixed;
+    inset: 0 0 0 30%;
+    padding-top: 8rem;
+    z-index: 1;
+  }
+  .nav__list[data-visible=true] {
+    display: block !important;
+    animation: slideIn 300ms ease-in-out forwards !important;
+  }
+  .nav__list[data-visible=false] {
+    display: block !important;
+    animation: slideOut 300ms ease-in-out forwards !important;
+  }
+}
+body {
+  background-image: url(/assets/destination/background-destination-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (max-width: 1100px) {
+  body {
+    background-image: url(/assets/destination/background-destination-tablet.jpg);
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    background-image: url(/assets/destination/background-destination-mobile.jpg);
+  }
+}/*# sourceMappingURL=destination.css.map */
