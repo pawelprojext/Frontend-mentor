@@ -1,50 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  <link rel="stylesheet" href="/styles/destination/destination.css">
-  <title>Frontend Mentor | Space tourism website</title>
-</head>
-<body>
-  <header class="primary-header">
-    <img src="/assets/shared/logo.svg" alt="logo">
-    <div class="line"></div>
-  
-    <button class="nav-mobile-open" data-expanded="false">
-      <span class="sr-only">Menu</span>
-    </button>
-  
-    <nav class="primary-navigation">
-      <ul class="nav__list" data-visible="false">
-        <li><a href="#"><b>00</b>Home</a></li>
-        <li><a href="#" class="active"><b>01</b>Destination</a></li>
-        <li><a href="#"><b>02</b>Crew</a></li>
-        <li><a href="#"><b>03</b>Technology</a></li>
-      </ul>
-    </nav>
-  </header>
-  01 Pick your destination
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="/styles/destination/destination.css" />
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+  <body>
+    <header class="primary-header">
+      <img src="/assets/shared/logo.svg" alt="logo" />
+      <div class="line"></div>
 
-  Moon
-  Mars
-  Europa
-  Titan
+      <button class="nav-mobile-open" data-expanded="false">
+        <span class="sr-only">Menu</span>
+      </button>
 
-  Moon
+      <nav class="primary-navigation">
+        <ul class="nav__list" data-visible="false">
+          <li>
+            <a href="../index.html"><b>00</b>Home</a>
+          </li>
+          <li>
+            <a href="../Destination/destination.html" class="active"><b>01</b>Destination</a>
+          </li>
+          <li>
+            <a href="../Crew/crew.html"><b>02</b>Crew</a>
+          </li>
+          <li>
+            <a href="../Technology/technology.html"><b>03</b>Technology</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-  See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
-  regain perspective and come back refreshed. While you’re there, take in some history 
-  by visiting the Luna 2 and Apollo 11 landing sites.
+    <main>
+      <p class="title">
+        <span class="gray">01</span>
+        Pick your destination
+      </p>
 
-  Avg. distance
-  384,400 km
+      <div class="flex planet-container">
+        <div class="img">
+          <img
+            class="planet-image"
+            src="/assets/destination/image-moon.png"
+            alt="Moon"
+          />
+        </div>
 
-  Est. travel time
-  3 days
+        <div class="content">
+          <div class="planet-switcher">
+            <p class="planet-switch active-switch">Moon</p>
+            <p class="planet-switch">Mars</p>
+            <p class="planet-switch">Europa</p>
+            <p class="planet-switch">Titan</p>
+          </div>
 
-  <script src="/scripts/nav.js"></script>
-</body>
+          <h1 class="planet-title">Moon</h1>
+
+          <p class="content-text gray">
+            See our planet as you’ve never seen it before. A perfect relaxing
+            trip away to help regain perspective and come back refreshed. While
+            you’re there, take in some history by visiting the Luna 2 and Apollo
+            11 landing sites.
+          </p>
+
+          <div class="line"></div>
+          <div class="stats">
+            <div class="col">
+              <p class="col-title distance-title gray">Avg. distance</p>
+              <p class="stat-value distance-value">384,400 km</p>
+            </div>
+
+            <div class="col">
+              <p class="col-title travel-title gray">Est. travel time</p>
+              <p class="stat-value travel-value">3 days</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="/scripts/nav.js"></script>
+    <script src="/scripts/destination.js"></script>
+  </body>
 </html>
