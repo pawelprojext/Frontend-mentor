@@ -16,3 +16,12 @@
 .active-switch{
   border-bottom: 5px solid white;
 }
+
+.title {  
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  .gray {
+    margin-right: 0.25rem;
+  }
+}

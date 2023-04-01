@@ -1,0 +1,117 @@
+@use "../base/reset";
+@use "../base/utilites";
+@use "../header/header";
+
+body {
+  background-image: url(/assets/crew/background-crew-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  @media (max-width: 1100px) {
+    background-image: url(/assets/crew/background-crew-tablet.jpg);
+  }
+  @media (max-width: 768px) {
+    background-image: url(/assets/crew/background-crew-mobile.jpg);
+  }
+}
+
+main {
+  padding: 1rem;
+  text-align: center;
+  .title {
+    font-family: var(--ff-bc);
+    padding: 2rem;
+    @media (min-width: 768px) {
+      text-align: left;
+    }
+    @media (min-width: 1100px) {
+      padding-inline: 6rem;
+    }
+  }
+  .flex {
+    display: flex;
+    gap: 2rem;
+    @media (max-width: 1100px) and (min-width: 768px) {
+      flex-direction: column;
+    }
+    @media (max-width: 768px) {
+      flex-direction: column-reverse;
+    }
+
+    @media (min-width: 1100px) {
+      text-align: left;
+      justify-content: space-around;
+      > * {
+        flex-basis: 35%;
+      }
+    }
+
+    .image-container {
+      border-bottom: 1px solid gray;
+      padding: 2rem 2rem 0 2rem;
+      max-height: 30rem;
+      @media (min-width: 768px) {
+        border: none;
+      }
+      .image {
+        width: 60%;
+        margin: 0 auto;
+        @media (min-width: 1100px) {
+          width: 100%;
+        }
+      }
+    }
+
+    .crew-member {
+      display: grid;
+      gap: 1rem;
+      align-content: center;
+
+      @media (max-width: 1100px) and (min-width: 768px) {
+        max-width: 35rem;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .dot-holder {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        grid-row: 1/1;
+        @media (min-width: 768px) {
+          grid-row: 5/5;
+        }
+        .active-dot {
+          background-color: white !important;
+        }
+        .dot {
+            cursor: pointer;
+          width: 0.75rem;
+          height: 0.75rem;
+          border-radius: 50%;
+          background-color: gray;
+        }
+      }
+      .member-status {
+        font-family: var(--ff-be);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        @media (min-width: 768px) {
+          font-size: 1.5rem;
+        }
+      }
+      .member-name {
+        font-family: var(--ff-be);
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        @media (min-width: 768px) {
+          font-size: 2.5rem;
+        }
+      }
+      .member-desc {
+        font-family: var(--ff-ba);
+        font-size: 0.938rem;
+      }
+    }
+  }
+}

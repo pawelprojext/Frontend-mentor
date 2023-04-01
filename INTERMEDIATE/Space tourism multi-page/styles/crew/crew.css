@@ -233,118 +233,137 @@ a {
   }
 }
 body {
-  background-image: url(/assets/destination/background-destination-desktop.jpg);
+  background-image: url(/assets/crew/background-crew-desktop.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  color: #fff;
+  color: white;
 }
-@media screen and (max-width: 1100px) {
+@media (max-width: 1100px) {
   body {
-    background-image: url(/assets/destination/background-destination-tablet.jpg);
+    background-image: url(/assets/crew/background-crew-tablet.jpg);
   }
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   body {
-    background-image: url(/assets/destination/background-destination-mobile.jpg);
+    background-image: url(/assets/crew/background-crew-mobile.jpg);
   }
 }
 
 main {
-  padding: 1rem 2rem;
-  font-family: var(--ff-bc);
+  padding: 1rem;
   text-align: center;
-  max-width: 1800px;
 }
-main .stats {
-  display: flex;
-  justify-content: space-around;
-}
-@media (max-width: 768px) {
-  main .stats {
-    flex-direction: column;
-  }
-}
-main .img img {
-  margin: 0 auto;
-}
-main .planet-switcher {
-  display: flex;
+main .title {
+  font-family: var(--ff-bc);
   padding: 2rem;
-  gap: 2rem;
-  justify-content: center;
-  text-transform: uppercase;
 }
-main .planet-switcher .planet-switch {
-  cursor: pointer;
-  font-size: 14px;
-  padding: 0.25rem;
-  letter-spacing: 2px;
-}
-main .planet-switcher .planet-switch:hover:not(.active-switch) {
-  border-bottom: 5px solid gray;
-}
-main .content .planet-title {
-  font-family: var(--ff-be);
-  text-transform: uppercase;
-  font-size: 3.5rem;
-  font-weight: lighter;
-  letter-spacing: 2px;
-}
-main .content .content-text {
-  font-size: 0.938rem;
-  font-family: var(--ff-ba);
-}
-main .content .line {
-  width: 100%;
-  height: 1px;
-  background-color: gray;
-  margin: 2rem 0;
-}
-main .content .stats {
-  font-size: 1.125rem;
-  text-transform: uppercase;
-}
-@media (max-width: 768px) {
-  main .content .stats .col + .col {
-    margin-top: 1rem;
-  }
-}
-main .content .stats .stat-value {
-  font-size: 1.75rem;
-}
-
-@media (max-width: 1100px) and (min-width: 768px) {
-  .content {
-    width: 80%;
-    margin: 0 auto;
-  }
-  .title {
-    text-align: left !important;
+@media (min-width: 768px) {
+  main .title {
+    text-align: left;
   }
 }
 @media (min-width: 1100px) {
-  main {
-    text-align: left;
-  }
-  main .planet-title {
-    font-size: 6.25rem !important;
-  }
   main .title {
+    padding-inline: 6rem;
+  }
+}
+main .flex {
+  display: flex;
+  gap: 2rem;
+}
+@media (max-width: 1100px) and (min-width: 768px) {
+  main .flex {
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  main .flex {
+    flex-direction: column-reverse;
+  }
+}
+@media (min-width: 1100px) {
+  main .flex {
     text-align: left;
-    margin-bottom: 4rem;
-  }
-  main .planet-switcher {
-    padding: 1rem 0;
-    justify-content: flex-start;
-  }
-  .flex {
-    display: flex;
     justify-content: space-around;
   }
-  .flex > * {
+  main .flex > * {
     flex-basis: 35%;
   }
-  .stats .col + .col {
-    margin-top: 0;
+}
+main .flex .image-container {
+  border-bottom: 1px solid gray;
+  padding: 2rem 2rem 0 2rem;
+  max-height: 30rem;
+}
+@media (min-width: 768px) {
+  main .flex .image-container {
+    border: none;
   }
-}/*# sourceMappingURL=destination.css.map */
+}
+main .flex .image-container .image {
+  width: 60%;
+  margin: 0 auto;
+}
+@media (min-width: 1100px) {
+  main .flex .image-container .image {
+    width: 100%;
+  }
+}
+main .flex .crew-member {
+  display: grid;
+  gap: 1rem;
+  align-content: center;
+}
+@media (max-width: 1100px) and (min-width: 768px) {
+  main .flex .crew-member {
+    max-width: 35rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+main .flex .crew-member .dot-holder {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  grid-row: 1/1;
+}
+@media (min-width: 768px) {
+  main .flex .crew-member .dot-holder {
+    grid-row: 5/5;
+  }
+}
+main .flex .crew-member .dot-holder .active-dot {
+  background-color: white !important;
+}
+main .flex .crew-member .dot-holder .dot {
+  cursor: pointer;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: gray;
+}
+main .flex .crew-member .member-status {
+  font-family: var(--ff-be);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+@media (min-width: 768px) {
+  main .flex .crew-member .member-status {
+    font-size: 1.5rem;
+  }
+}
+main .flex .crew-member .member-name {
+  font-family: var(--ff-be);
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+@media (min-width: 768px) {
+  main .flex .crew-member .member-name {
+    font-size: 2.5rem;
+  }
+}
+main .flex .crew-member .member-desc {
+  font-family: var(--ff-ba);
+  font-size: 0.938rem;
+}/*# sourceMappingURL=crew.css.map */

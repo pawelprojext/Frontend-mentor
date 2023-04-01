@@ -15,6 +15,10 @@ fetch("/data.json")
   .then((res) => res.json())
   .then((data) => {
     const destinations = data.destinations;
+
+    const changeData = () =>{
+      
+    };
     switchBtn.forEach((e, i) => {
       e.addEventListener("click", () => {
         hideActiveBtn();
