@@ -16,8 +16,12 @@ fetch("/data.json")
   .then((data) => {
     const destinations = data.destinations;
 
-    const changeData = () =>{
-      
+    const changeData = (i) =>{
+      planetImage.src = destinations[i].images.png;
+      planetTitle.innerText = destinations[i].name;
+      planetDescribtion.innerText = destinations[i].description;
+      planetDistanceValue.innerText = destinations[i].distance;
+      planetTravelValue.innerText = destinations[i].travel;
     };
     switchBtn.forEach((e, i) => {
       e.addEventListener("click", () => {
@@ -26,32 +30,16 @@ fetch("/data.json")
 
         switch (e.innerText) {
           case "MOON":
-            planetImage.src = destinations[0].images.png;
-            planetTitle.innerText = destinations[0].name;
-            planetDescribtion.innerText = destinations[0].description;
-            planetDistanceValue.innerText = destinations[0].distance;
-            planetTravelValue.innerText = destinations[0].travel;
+            changeData(0);
             break;
           case "MARS":
-            planetImage.src = destinations[1].images.png;
-            planetTitle.innerText = destinations[1].name;
-            planetDescribtion.innerText = destinations[1].description;
-            planetDistanceValue.innerText = destinations[1].distance;
-            planetTravelValue.innerText = destinations[1].travel;
+            changeData(1);
             break;
           case "EUROPA":
-            planetImage.src = destinations[2].images.png;
-            planetTitle.innerText = destinations[2].name;
-            planetDescribtion.innerText = destinations[2].description;
-            planetDistanceValue.innerText = destinations[2].distance;
-            planetTravelValue.innerText = destinations[2].travel;
+            changeData(2);
             break;
           case "TITAN":
-            planetImage.src = destinations[3].images.png;
-            planetTitle.innerText = destinations[3].name;
-            planetDescribtion.innerText = destinations[3].description;
-            planetDistanceValue.innerText = destinations[3].distance;
-            planetTravelValue.innerText = destinations[3].travel;
+            changeData(3);
             break;
         }
       });

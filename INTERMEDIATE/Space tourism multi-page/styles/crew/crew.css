@@ -155,7 +155,6 @@ a {
 .primary-navigation .nav__list li a {
   padding: var(--padding) 0;
   color: white;
-  height: 100%;
   letter-spacing: 2px;
 }
 .primary-navigation .nav__list li a:hover:not(.active) {

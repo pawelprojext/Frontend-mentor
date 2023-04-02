@@ -155,7 +155,6 @@ a {
 .primary-navigation .nav__list li a {
   padding: var(--padding) 0;
   color: white;
-  height: 100%;
   letter-spacing: 2px;
 }
 .primary-navigation .nav__list li a:hover:not(.active) {
@@ -263,6 +262,9 @@ main .stats {
   main .stats {
     flex-direction: column;
   }
+}
+main .img {
+  padding: 2rem;
 }
 main .img img {
   margin: 0 auto;
