@@ -257,7 +257,7 @@ main .title {
 @media (min-width: 1100px) {
   main .title {
     text-align: left;
-    padding: 2rem 5.5rem;
+    padding: 2rem;
   }
 }
 main .wrapper {
@@ -340,6 +340,9 @@ main .wrapper .flex .launch-content .content-switcher li {
   place-content: center;
   border: 1px solid gray;
   font-family: var(--ff-be);
+}
+main .wrapper .flex .launch-content .content-switcher li:hover:not(.active-switch) {
+  border-color: white;
 }
 @media (min-width: 768px) {
   main .wrapper .flex .launch-content .content-switcher li {
