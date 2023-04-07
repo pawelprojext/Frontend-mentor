@@ -1,0 +1,11 @@
+.primary-header{
+        justify-content: space-between;
+        align-items: center;
+        margin-inline: clamp(1rem, 5.5vw, 5rem);
+        padding-block: 2rem;
+        border-bottom: 1px solid var(--gray);
+        .header__image--container{
+            flex-shrink: 0
+        }
+    }
+@import './nav';
