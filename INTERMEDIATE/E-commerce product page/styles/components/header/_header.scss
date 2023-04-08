@@ -8,4 +8,14 @@
             flex-shrink: 0
         }
     }
+
+@media(max-width:45em){
+    .primary-header[data-overlay]::before{
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-color: var(--data-overlay-bg);
+        z-index: 1;
+    }
+}    
 @import './nav';

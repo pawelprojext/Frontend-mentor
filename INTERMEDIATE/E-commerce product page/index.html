@@ -34,37 +34,61 @@
   </nav>
 </header>
 
-  <!-- <main class="main">
-    <div class="flex">
-      <div class="images-container">
+  <main class="main">
+    <div class="wrapper">
+      <div class="images-container firstContainer">
         <div class="big-image-container">
-          <img src="" alt="" class="big-image">
+          <span class="arrow arrow-previous"><img src="/images/icon-previous.svg" alt="previous image"></span>
+          <img src="/images/image-product-1.jpg" id="img-b-1" alt="big image" class="big-image active">
+          <img src="/images/image-product-2.jpg" id="img-b-2" alt="big image" class="big-image">
+          <img src="/images/image-product-3.jpg" id="img-b-3" alt="big image" class="big-image">
+          <img src="/images/image-product-4.jpg" id="img-b-4" alt="big image" class="big-image">
+          <span class="arrow arrow-next"><img src="/images/icon-next.svg" alt="next image"></span>
         </div>
         <div class="small-image-container">
-          <img src="/images/image-product-1-thumbnail.jpg" alt="image-small">
-          <img src="/images/image-product-2-thumbnail.jpg" alt="image-small">
-          <img src="/images/image-product-3-thumbnail.jpg" alt="image-small">
-          <img src="/images/image-product-4-thumbnail.jpg" alt="image-small">
+          <img src="/images/image-product-1-thumbnail.jpg" id="img-s-1" class="img-s active-s" alt="image-small">
+          <img src="/images/image-product-2-thumbnail.jpg" id="img-s-2" class="img-s" alt="image-small">
+          <img src="/images/image-product-3-thumbnail.jpg" id="img-s-3" class="img-s" alt="image-small">
+          <img src="/images/image-product-4-thumbnail.jpg" id="img-s-4" class="img-s" alt="image-small">
+        </div>
+
+        <div id="lightbox" data-visible="false">       
+           <div class="big-image-container">
+          <span class="arrow arrow-previous"><img src="/images/icon-previous.svg" alt="previous image"></span>
+          <img src="/images/image-product-1.jpg" id="img-b-1" alt="big image" class="big-image active">
+          <img src="/images/image-product-2.jpg" id="img-b-2" alt="big image" class="big-image">
+          <img src="/images/image-product-3.jpg" id="img-b-3" alt="big image" class="big-image">
+          <img src="/images/image-product-4.jpg" id="img-b-4" alt="big image" class="big-image">
+          <span class="arrow arrow-next"><img src="/images/icon-next.svg" alt="next image"></span>
+        </div>
+        <div class="small-image-container">
+          <img src="/images/image-product-1-thumbnail.jpg" id="img-s-1" class="img-s active-s" alt="image-small">
+          <img src="/images/image-product-2-thumbnail.jpg" id="img-s-2" class="img-s" alt="image-small">
+          <img src="/images/image-product-3-thumbnail.jpg" id="img-s-3" class="img-s" alt="image-small">
+          <img src="/images/image-product-4-thumbnail.jpg" id="img-s-4" class="img-s" alt="image-small">
         </div>
       </div>
 
+      </div>
       <div class="text-content">
-        <h3 class="firm-name">Sneaker Company</h3>
+        <h3 class="firm-name orange upper">Sneaker Company</h3>
         <h1 class="product-name">Fall Limited Edition Sneakers</h1>
-        <p class="product-desc gray">
+        <p class="product-desc dark-gray">
           These low-profile sneakers are your perfect casual wear companion. Featuring a
           durable rubber outer sole, they’ll withstand everything the weather can offer.
         </p>
-        <div class="flex">
+        <div class="flex prices">
+          <div class="flex actual-prices">
           <p class="actual-price">$125.00</p>
-          <p class="sale-value">50%</p>
+          <p class="sale-value orange">50%</p>
         </div>
-        <s class="og-price">$250.00</s>
-        <div class="flex">
+          <s class="og-price gray">$250.00</s>
+        </div>
+        <div class="flex cart">
           <div class="product-number-container flex">
-            <img src="/images/icon-minus.svg" alt="minus">
+            <img src="/images/icon-minus.svg" class="remove-number" alt="minus">
             <span class="product-number">0</span>
-            <img src="/images/icon-plus.svg" alt="plus">
+            <img src="/images/icon-plus.svg" class="add-number" alt="plus">
           </div>
           <div class="add-to-cart--btn"><p class="add-cart-text">Add to cart</p></div>
           
@@ -72,8 +96,7 @@
 
       </div>
     </div>
-  </main> -->
-
+  </main>
   <script src="/index.js"></script>
 </body>
 </html>
