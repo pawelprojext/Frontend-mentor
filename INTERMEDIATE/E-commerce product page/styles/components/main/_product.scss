@@ -64,12 +64,20 @@ main {
         justify-content: space-between;
         padding: 1rem;
         .remove-number {
-          width: 12px;
-          height: 4px;
+          width: 16px;
+          height: 6px;
+          transition: 500ms all;
+          &:hover {
+            transform: scale(1.25);
+          }
         }
         .add-number {
-          width: 12px;
-          height: 12px;
+          transition: 500ms all;
+          width: 16px;
+          height: 16px;
+          &:hover {
+            transform: scale(1.25);
+          }
         }
       }
     }
@@ -78,11 +86,16 @@ main {
       background-color: var(--orange);
       padding: 1rem;
       margin-top: 1rem;
+      border: none;
       border-radius: var(--radius);
       position: relative;
       text-align: center;
       color: white;
       font-weight: var(--fw-700);
+      transition: 500ms all;
+      &:hover {
+        transform: scale(1.05);
+      }
     }
     .add-to-cart--btn::before {
       content: "";
@@ -168,7 +181,7 @@ main {
     padding: 2rem;
     border-radius: 0.5rem;
     overflow: hidden;
-    .big-image{
+    .big-image {
       border-radius: 0.5rem;
       width: 50%;
       margin: 0 auto;
@@ -177,3 +190,4 @@ main {
 }
 
 @import "./lightbox";
+@import "./cart";
