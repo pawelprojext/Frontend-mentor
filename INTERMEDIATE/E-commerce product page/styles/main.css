@@ -152,6 +152,20 @@ body {
 .primary-navigation .nav__list--secondary .nav__avatar {
   width: 3rem;
 }
+.primary-navigation .nav__list--primary li {
+  padding: 0.5rem;
+}
+.primary-navigation .nav__list--primary li::after {
+  content: "";
+  display: block;
+  height: 5px;
+  background: black;
+  transform: scale(0, 1);
+  transition: 350ms all;
+}
+.primary-navigation .nav__list--primary li:hover::after {
+  transform: scale(1, 1);
+}
 
 .nav__mobile-toggle {
   border: none;
